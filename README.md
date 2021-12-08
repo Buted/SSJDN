@@ -8,6 +8,7 @@ Generate `train.json`, `dev.json` and `test.json` according to [data_list.csv](.
 
 Move `train.json`, `dev.json` and `test.json` to [ACE](./ACE) / [KBP14](./KBP14) / [KBP15](./KBP15) dir.
 
+**Note**: `word_class_label.txt` and `all_word_class_id.txt` are deprecated, although runner.py reads them.
 
 ## Requirements
 
