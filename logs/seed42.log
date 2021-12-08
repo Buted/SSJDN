@@ -1,0 +1,4193 @@
+Running on cuda:2
+Load BERT: bert-large-uncased
+loading corpus from ACE/train.json
+read...
+list...
+embedding...
+embedding was built...
+--------------------
+Sentences: 14477
+trigger words length more than 1 : 198
+no event: 11351
+using no event: 11351
+1 event: 2377
+1+ event: 749
+--------------------
+
+--------------------
+Sentences: 831
+trigger words length more than 1 : 17
+no event: 550
+using no event: 550
+1 event: 197
+1+ event: 84
+--------------------
+
+defaultdict(None, {'<pad>': 0, 'O': 1, 'CONFLICT||ATTACK': 2, 'MOVEMENT||TRANSPORT': 3, 'LIFE||DIE': 4, 'CONTACT||MEET': 5, 'PERSONNEL||END|POSITION': 6, 'PERSONNEL||ELECT': 7, 'TRANSACTION||TRANSFER|MONEY': 8, 'CONTACT||PHONE|WRITE': 9, 'JUSTICE||TRIAL|HEARING': 10, 'LIFE||INJURE': 11, 'TRANSACTION||TRANSFER|OWNERSHIP': 12, 'JUSTICE||CHARGE|INDICT': 13, 'PERSONNEL||START|POSITION': 14, 'JUSTICE||SENTENCE': 15, 'JUSTICE||ARREST|JAIL': 16, 'CONFLICT||DEMONSTRATE': 17, 'LIFE||MARRY': 18, 'JUSTICE||SUE': 19, 'JUSTICE||CONVICT': 20, 'LIFE||BE|BORN': 21, 'BUSINESS||DECLARE|BANKRUPTCY': 22, 'JUSTICE||RELEASE|PAROLE': 23, 'BUSINESS||START|ORG': 24, 'JUSTICE||APPEAL': 25, 'BUSINESS||END|ORG': 26, 'JUSTICE||FINE': 27, 'LIFE||DIVORCE': 28, 'JUSTICE||EXECUTE': 29, 'BUSINESS||MERGE|ORG': 30, 'PERSONNEL||NOMINATE': 31, 'JUSTICE||ACQUIT': 32, 'JUSTICE||EXTRADITE': 33, 'JUSTICE||PARDON': 34})
+--------------------
+Sentences: 952
+trigger words length more than 1 : 19
+no event: 467
+using no event: 467
+1 event: 283
+1+ event: 202
+--------------------
+
+created <class 'enet.models.ee.EDModel'> with params ({'loss_alpha': 2, 'bert_layers': 4, 'oc': 35}, device(type='cuda', index=2))
+dropout rate: 0.5
+dropout rate: 0.5
+optimizer in use: adam
+init complete
+
+
+Starting training...
+
+Epoch 1
+Seq train
+Epoch finish
+------------------------------
+------ loss : 3.764846 -------
+--- Trigger Identification ---
+ P: 0.026645 R: 0.021660 F1: 0.023895
+--- Trigger Classification ---
+ P: 0.003531 R: 0.002871 F1: 0.003167
+---- seq loss : 0.145373 -----
+--- class loss : 0.241298 ----
+train an epoch: 349.0841839313507
+
+Epoch 1  training loss:  3.764846252947717  training ed f1:  0.00316683460486541  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.291351 -------
+--- Trigger Identification ---
+ P: 0.333333 R: 0.008380 F1: 0.016349
+--- Trigger Classification ---
+ P: 0.333333 R: 0.008380 F1: 0.016349
+---- seq loss : 0.107851 -----
+--- class loss : 0.203889 ----
+
+Epoch 1  dev loss:  0.2913513057507001 
+dev ed f1:  0.01634877384196185  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.371450 -------
+--- Trigger Identification ---
+ P: 0.571429 R: 0.005384 F1: 0.010667
+--- Trigger Classification ---
+ P: 0.571429 R: 0.005384 F1: 0.010667
+---- seq loss : 0.154271 -----
+--- class loss : 0.241311 ----
+test an epoch: 4.97908091545105
+
+Epoch 1  test loss:  0.37145046492417655 
+test ed f1:  0.010666666666666668  test ae f1:  0
+Save CPU model at Epoch 1 score:  0.01634877384196185
+Now testset score:  0.010666666666666668
+Save best model at Epoch 1 best_score:  0.010666666666666668
+Epoch 2
+Seq train
+Epoch finish
+------------------------------
+------ loss : 3.200631 -------
+--- Trigger Identification ---
+ P: 0.702317 R: 0.102818 F1: 0.179376
+--- Trigger Classification ---
+ P: 0.643494 R: 0.094207 F1: 0.164352
+---- seq loss : 0.070942 -----
+--- class loss : 0.208646 ----
+train an epoch: 349.3755433559418
+
+Epoch 2  training loss:  3.2006313558709016  training ed f1:  0.16435237878442976  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.231954 -------
+--- Trigger Identification ---
+ P: 0.688235 R: 0.326816 F1: 0.443182
+--- Trigger Classification ---
+ P: 0.658824 R: 0.312849 F1: 0.424242
+---- seq loss : 0.075007 -----
+--- class loss : 0.174386 ----
+
+Epoch 2  dev loss:  0.23195428573168242 
+dev ed f1:  0.42424242424242425  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.284976 -------
+--- Trigger Identification ---
+ P: 0.699317 R: 0.413190 F1: 0.519459
+--- Trigger Classification ---
+ P: 0.660592 R: 0.390310 F1: 0.490694
+---- seq loss : 0.099861 -----
+--- class loss : 0.205684 ----
+test an epoch: 4.8006510734558105
+
+Epoch 2  test loss:  0.284976027905941 
+test ed f1:  0.4906937394247039  test ae f1:  0
+Save CPU model at Epoch 2 score:  0.42424242424242425
+Now testset score:  0.4906937394247039
+Save best model at Epoch 2 best_score:  0.4906937394247039
+Epoch 3
+Seq train
+Epoch finish
+------------------------------
+------ loss : 2.724695 -------
+--- Trigger Identification ---
+ P: 0.769231 R: 0.294885 F1: 0.426335
+--- Trigger Classification ---
+ P: 0.716133 R: 0.274530 F1: 0.396906
+---- seq loss : 0.049318 -----
+--- class loss : 0.178358 ----
+train an epoch: 351.53338170051575
+
+Epoch 3  training loss:  2.7246950208219736  training ed f1:  0.3969062441048859  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.199573 -------
+--- Trigger Identification ---
+ P: 0.557103 R: 0.558659 F1: 0.557880
+--- Trigger Classification ---
+ P: 0.518106 R: 0.519553 F1: 0.518828
+---- seq loss : 0.068506 -----
+--- class loss : 0.145630 ----
+
+Epoch 3  dev loss:  0.19957335809102425 
+dev ed f1:  0.5188284518828451  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.245265 -------
+--- Trigger Identification ---
+ P: 0.662198 R: 0.664872 F1: 0.663533
+--- Trigger Classification ---
+ P: 0.609920 R: 0.612382 F1: 0.611148
+---- seq loss : 0.090696 -----
+--- class loss : 0.171743 ----
+test an epoch: 5.138899803161621
+
+Epoch 3  test loss:  0.24526511132717133 
+test ed f1:  0.6111484217595702  test ae f1:  0
+Save CPU model at Epoch 3 score:  0.5188284518828451
+Now testset score:  0.6111484217595702
+Save best model at Epoch 3 best_score:  0.6111484217595702
+Epoch 4
+Seq train
+Epoch finish
+------------------------------
+------ loss : 2.299609 -------
+--- Trigger Identification ---
+ P: 0.790378 R: 0.420146 F1: 0.548645
+--- Trigger Classification ---
+ P: 0.754050 R: 0.400835 F1: 0.523428
+---- seq loss : 0.038808 -----
+--- class loss : 0.150720 ----
+train an epoch: 351.9116892814636
+
+Epoch 4  training loss:  2.2996086777572335  training ed f1:  0.5234281819730789  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.176668 -------
+--- Trigger Identification ---
+ P: 0.501104 R: 0.634078 F1: 0.559803
+--- Trigger Classification ---
+ P: 0.470199 R: 0.594972 F1: 0.525277
+---- seq loss : 0.067960 -----
+--- class loss : 0.120787 ----
+
+Epoch 4  dev loss:  0.17666831985116005 
+dev ed f1:  0.5252774352651048  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.211756 -------
+--- Trigger Identification ---
+ P: 0.632749 R: 0.728129 F1: 0.677096
+--- Trigger Classification ---
+ P: 0.588304 R: 0.676985 F1: 0.629537
+---- seq loss : 0.082916 -----
+--- class loss : 0.143155 ----
+test an epoch: 4.748993635177612
+
+Epoch 4  test loss:  0.21175612558921178 
+test ed f1:  0.6295369211514392  test ae f1:  0
+Save CPU model at Epoch 4 score:  0.5252774352651048
+Now testset score:  0.6295369211514392
+Save best model at Epoch 4 best_score:  0.6295369211514392
+Epoch 5
+Seq train
+Epoch finish
+------------------------------
+------ loss : 1.953652 -------
+--- Trigger Identification ---
+ P: 0.809216 R: 0.522443 F1: 0.634951
+--- Trigger Classification ---
+ P: 0.779305 R: 0.503132 F1: 0.611481
+---- seq loss : 0.031187 -----
+--- class loss : 0.128164 ----
+train an epoch: 351.765585899353
+
+Epoch 5  training loss:  1.9536524591988023  training ed f1:  0.6114811290834126  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.154771 -------
+--- Trigger Identification ---
+ P: 0.505285 R: 0.667598 F1: 0.575211
+--- Trigger Classification ---
+ P: 0.475687 R: 0.628492 F1: 0.541516
+---- seq loss : 0.063279 -----
+--- class loss : 0.101659 ----
+
+Epoch 5  dev loss:  0.15477143514614838 
+dev ed f1:  0.5415162454873645  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.189188 -------
+--- Trigger Identification ---
+ P: 0.610883 R: 0.800808 F1: 0.693069
+--- Trigger Classification ---
+ P: 0.578029 R: 0.757739 F1: 0.655795
+---- seq loss : 0.079997 -----
+--- class loss : 0.121323 ----
+test an epoch: 4.761370658874512
+
+Epoch 5  test loss:  0.1891878515481949 
+test ed f1:  0.6557949912638323  test ae f1:  0
+Save CPU model at Epoch 5 score:  0.5415162454873645
+Now testset score:  0.6557949912638323
+Save best model at Epoch 5 best_score:  0.6557949912638323
+Epoch 6
+Seq train
+Epoch finish
+------------------------------
+------ loss : 1.697979 -------
+--- Trigger Identification ---
+ P: 0.802772 R: 0.589509 F1: 0.679807
+--- Trigger Classification ---
+ P: 0.777896 R: 0.571242 F1: 0.658742
+---- seq loss : 0.026562 -----
+--- class loss : 0.111428 ----
+train an epoch: 350.9865872859955
+
+Epoch 6  training loss:  1.6979794013776526  training ed f1:  0.6587421005115859  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.142204 -------
+--- Trigger Identification ---
+ P: 0.524590 R: 0.625698 F1: 0.570701
+--- Trigger Classification ---
+ P: 0.494145 R: 0.589385 F1: 0.537580
+---- seq loss : 0.063157 -----
+--- class loss : 0.087829 ----
+
+Epoch 6  dev loss:  0.14220355049921915 
+dev ed f1:  0.5375796178343949  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.164903 -------
+--- Trigger Identification ---
+ P: 0.633218 R: 0.738896 F1: 0.681988
+--- Trigger Classification ---
+ P: 0.613610 R: 0.716016 F1: 0.660870
+---- seq loss : 0.070054 -----
+--- class loss : 0.105388 ----
+test an epoch: 4.747173070907593
+
+Epoch 6  test loss:  0.1649029458562533 
+test ed f1:  0.6608695652173913  test ae f1:  0
+Save best model at Epoch 6 best_score:  0.6608695652173913
+Epoch 7
+Seq train
+Epoch finish
+------------------------------
+------ loss : 1.514652 -------
+--- Trigger Identification ---
+ P: 0.838743 R: 0.640658 F1: 0.726439
+--- Trigger Classification ---
+ P: 0.814144 R: 0.621868 F1: 0.705134
+---- seq loss : 0.022911 -----
+--- class loss : 0.099449 ----
+train an epoch: 350.6949143409729
+
+Epoch 7  training loss:  1.5146519678910046  training ed f1:  0.7051338955466785  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.127057 -------
+--- Trigger Identification ---
+ P: 0.557692 R: 0.648045 F1: 0.599483
+--- Trigger Classification ---
+ P: 0.533654 R: 0.620112 F1: 0.573643
+---- seq loss : 0.056977 -----
+--- class loss : 0.077866 ----
+
+Epoch 7  dev loss:  0.12705667216617328 
+dev ed f1:  0.5736434108527132  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.148342 -------
+--- Trigger Identification ---
+ P: 0.674883 R: 0.773890 F1: 0.721003
+--- Trigger Classification ---
+ P: 0.645540 R: 0.740242 F1: 0.689655
+---- seq loss : 0.063922 -----
+--- class loss : 0.093800 ----
+test an epoch: 4.803041934967041
+
+Epoch 7  test loss:  0.14834205533067385 
+test ed f1:  0.6896551724137931  test ae f1:  0
+Save CPU model at Epoch 7 score:  0.5736434108527132
+Now testset score:  0.6896551724137931
+Save best model at Epoch 7 best_score:  0.6896551724137931
+Epoch 8
+Seq train
+Epoch finish
+------------------------------
+------ loss : 1.381161 -------
+--- Trigger Identification ---
+ P: 0.861891 R: 0.697025 F1: 0.770740
+--- Trigger Classification ---
+ P: 0.836722 R: 0.676670 F1: 0.748233
+---- seq loss : 0.019289 -----
+--- class loss : 0.090791 ----
+train an epoch: 350.18348479270935
+
+Epoch 8  training loss:  1.3811610750113892  training ed f1:  0.7482325782715337  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.124883 -------
+--- Trigger Identification ---
+ P: 0.543529 R: 0.645251 F1: 0.590038
+--- Trigger Classification ---
+ P: 0.522353 R: 0.620112 F1: 0.567050
+---- seq loss : 0.061469 -----
+--- class loss : 0.070459 ----
+
+Epoch 8  dev loss:  0.12488255721445267 
+dev ed f1:  0.5670498084291188  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.140218 -------
+--- Trigger Identification ---
+ P: 0.686977 R: 0.773890 F1: 0.727848
+--- Trigger Classification ---
+ P: 0.663082 R: 0.746972 F1: 0.702532
+---- seq loss : 0.063558 -----
+--- class loss : 0.085177 ----
+test an epoch: 4.752664566040039
+
+Epoch 8  test loss:  0.14021770333250363 
+test ed f1:  0.7025316455696203  test ae f1:  0
+Save best model at Epoch 8 best_score:  0.7025316455696203
+Epoch 9
+Seq train
+Epoch finish
+------------------------------
+------ loss : 1.281195 -------
+--- Trigger Identification ---
+ P: 0.879411 R: 0.747912 F1: 0.808349
+--- Trigger Classification ---
+ P: 0.860080 R: 0.731472 F1: 0.790580
+---- seq loss : 0.016353 -----
+--- class loss : 0.084323 ----
+train an epoch: 349.99861907958984
+
+Epoch 9  training loss:  1.2811949624460002  training ed f1:  0.790579607953744  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.118040 -------
+--- Trigger Identification ---
+ P: 0.551876 R: 0.698324 F1: 0.616523
+--- Trigger Classification ---
+ P: 0.516556 R: 0.653631 F1: 0.577065
+---- seq loss : 0.059725 -----
+--- class loss : 0.064795 ----
+
+Epoch 9  dev loss:  0.11804034231373897 
+dev ed f1:  0.5770653514180024  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.141222 -------
+--- Trigger Identification ---
+ P: 0.642251 R: 0.814266 F1: 0.718101
+--- Trigger Classification ---
+ P: 0.613588 R: 0.777927 F1: 0.686053
+---- seq loss : 0.070460 -----
+--- class loss : 0.078625 ----
+test an epoch: 4.833256721496582
+
+Epoch 9  test loss:  0.14122197280327478 
+test ed f1:  0.686053412462908  test ae f1:  0
+Save CPU model at Epoch 9 score:  0.5770653514180024
+Now testset score:  0.686053412462908
+Epoch 10
+Seq train
+Epoch finish
+------------------------------
+------ loss : 1.202601 -------
+--- Trigger Identification ---
+ P: 0.893881 R: 0.789144 F1: 0.838254
+--- Trigger Classification ---
+ P: 0.878806 R: 0.775835 F1: 0.824116
+---- seq loss : 0.013614 -----
+--- class loss : 0.079266 ----
+train an epoch: 349.8617923259735
+
+Epoch 10  training loss:  1.2026014220438257  training ed f1:  0.8241164241164242  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.112911 -------
+--- Trigger Identification ---
+ P: 0.715867 R: 0.541899 F1: 0.616852
+--- Trigger Classification ---
+ P: 0.693727 R: 0.525140 F1: 0.597774
+---- seq loss : 0.058736 -----
+--- class loss : 0.060194 ----
+
+Epoch 10  dev loss:  0.11291052479870044 
+dev ed f1:  0.5977742448330683  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.130017 -------
+--- Trigger Identification ---
+ P: 0.750000 R: 0.589502 F1: 0.660136
+--- Trigger Classification ---
+ P: 0.738014 R: 0.580081 F1: 0.649586
+---- seq loss : 0.063984 -----
+--- class loss : 0.073370 ----
+test an epoch: 4.737930059432983
+
+Epoch 10  test loss:  0.13001729448636373 
+test ed f1:  0.6495855312735493  test ae f1:  0
+Save CPU model at Epoch 10 score:  0.5977742448330683
+Now testset score:  0.6495855312735493
+Epoch 11
+Seq train
+Epoch finish
+------------------------------
+------ loss : 1.139937 -------
+--- Trigger Identification ---
+ P: 0.899505 R: 0.805846 F1: 0.850103
+--- Trigger Classification ---
+ P: 0.884066 R: 0.792015 F1: 0.835513
+---- seq loss : 0.013035 -----
+--- class loss : 0.075127 ----
+train an epoch: 350.1072278022766
+
+Epoch 11  training loss:  1.139937091478975  training ed f1:  0.8355127322780455  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.107161 -------
+--- Trigger Identification ---
+ P: 0.713333 R: 0.597765 F1: 0.650456
+--- Trigger Classification ---
+ P: 0.690000 R: 0.578212 F1: 0.629179
+---- seq loss : 0.056390 -----
+--- class loss : 0.056412 ----
+
+Epoch 11  dev loss:  0.10716099127267416 
+dev ed f1:  0.6291793313069909  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.115572 -------
+--- Trigger Identification ---
+ P: 0.808112 R: 0.697174 F1: 0.748555
+--- Trigger Classification ---
+ P: 0.797192 R: 0.687752 F1: 0.738439
+---- seq loss : 0.053369 -----
+--- class loss : 0.069114 ----
+test an epoch: 4.758139371871948
+
+Epoch 11  test loss:  0.11557155872384707 
+test ed f1:  0.7384393063583815  test ae f1:  0
+Save CPU model at Epoch 11 score:  0.6291793313069909
+Now testset score:  0.7384393063583815
+Save best model at Epoch 11 best_score:  0.7384393063583815
+Epoch 12
+Seq train
+Epoch finish
+------------------------------
+------ loss : 1.085755 -------
+--- Trigger Identification ---
+ P: 0.913619 R: 0.828027 F1: 0.868720
+--- Trigger Classification ---
+ P: 0.902390 R: 0.817850 F1: 0.858042
+---- seq loss : 0.011373 -----
+--- class loss : 0.071626 ----
+train an epoch: 350.0515513420105
+
+Epoch 12  training loss:  1.0857553483124731  training ed f1:  0.8580424366872006  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.102057 -------
+--- Trigger Identification ---
+ P: 0.675000 R: 0.678771 F1: 0.676880
+--- Trigger Classification ---
+ P: 0.647222 R: 0.650838 F1: 0.649025
+---- seq loss : 0.054226 -----
+--- class loss : 0.053146 ----
+
+Epoch 12  dev loss:  0.10205723201999298 
+dev ed f1:  0.6490250696378831  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.115962 -------
+--- Trigger Identification ---
+ P: 0.750311 R: 0.812921 F1: 0.780362
+--- Trigger Classification ---
+ P: 0.731677 R: 0.792732 F1: 0.760982
+---- seq loss : 0.057027 -----
+--- class loss : 0.065484 ----
+test an epoch: 4.7365734577178955
+
+Epoch 12  test loss:  0.11596207742889722 
+test ed f1:  0.760981912144703  test ae f1:  0
+Save CPU model at Epoch 12 score:  0.6490250696378831
+Now testset score:  0.760981912144703
+Save best model at Epoch 12 best_score:  0.760981912144703
+Epoch 13
+Seq train
+Epoch finish
+------------------------------
+------ loss : 1.038882 -------
+--- Trigger Identification ---
+ P: 0.918582 R: 0.844990 F1: 0.880250
+--- Trigger Classification ---
+ P: 0.905532 R: 0.832985 F1: 0.867745
+---- seq loss : 0.010369 -----
+--- class loss : 0.068568 ----
+train an epoch: 349.4385550022125
+
+Epoch 13  training loss:  1.0388815844838588  training ed f1:  0.8677450047573739  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.102317 -------
+--- Trigger Identification ---
+ P: 0.692308 R: 0.628492 F1: 0.658858
+--- Trigger Classification ---
+ P: 0.667692 R: 0.606145 F1: 0.635432
+---- seq loss : 0.057059 -----
+--- class loss : 0.050287 ----
+
+Epoch 13  dev loss:  0.10231739454544507 
+dev ed f1:  0.6354319180087847  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.117413 -------
+--- Trigger Identification ---
+ P: 0.732493 R: 0.703903 F1: 0.717914
+--- Trigger Classification ---
+ P: 0.714286 R: 0.686406 F1: 0.700069
+---- seq loss : 0.061293 -----
+--- class loss : 0.062356 ----
+test an epoch: 5.216038942337036
+
+Epoch 13  test loss:  0.11741324638326962 
+test ed f1:  0.7000686341798216  test ae f1:  0
+Epoch 14
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.996845 -------
+--- Trigger Identification ---
+ P: 0.927552 R: 0.865344 F1: 0.895369
+--- Trigger Classification ---
+ P: 0.917483 R: 0.855950 F1: 0.885649
+---- seq loss : 0.009012 -----
+--- class loss : 0.065856 ----
+train an epoch: 350.10710430145264
+
+Epoch 14  training loss:  0.9968452090459154  training ed f1:  0.8856487106790873  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.117965 -------
+--- Trigger Identification ---
+ P: 0.503802 R: 0.740223 F1: 0.599548
+--- Trigger Classification ---
+ P: 0.479087 R: 0.703911 F1: 0.570136
+---- seq loss : 0.074970 -----
+--- class loss : 0.047773 ----
+
+Epoch 14  dev loss:  0.1179654671309086 
+dev ed f1:  0.5701357466063349  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.134963 -------
+--- Trigger Identification ---
+ P: 0.640000 R: 0.818304 F1: 0.718252
+--- Trigger Classification ---
+ P: 0.615789 R: 0.787349 F1: 0.691081
+---- seq loss : 0.081303 -----
+--- class loss : 0.059622 ----
+test an epoch: 4.776453971862793
+
+Epoch 14  test loss:  0.13496345554788908 
+test ed f1:  0.6910809214412285  test ae f1:  0
+Epoch 15
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.959952 -------
+--- Trigger Identification ---
+ P: 0.933127 R: 0.866649 F1: 0.898661
+--- Trigger Classification ---
+ P: 0.924417 R: 0.858559 F1: 0.890272
+---- seq loss : 0.008613 -----
+--- class loss : 0.063423 ----
+train an epoch: 350.01485681533813
+
+Epoch 15  training loss:  0.9599523767088818  training ed f1:  0.8902719523745096  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.100908 -------
+--- Trigger Identification ---
+ P: 0.574324 R: 0.712291 F1: 0.635910
+--- Trigger Classification ---
+ P: 0.545045 R: 0.675978 F1: 0.603491
+---- seq loss : 0.059886 -----
+--- class loss : 0.045580 ----
+
+Epoch 15  dev loss:  0.10090844089595172 
+dev ed f1:  0.6034912718204488  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.109801 -------
+--- Trigger Identification ---
+ P: 0.710496 R: 0.829071 F1: 0.765217
+--- Trigger Classification ---
+ P: 0.688581 R: 0.803499 F1: 0.741615
+---- seq loss : 0.058283 -----
+--- class loss : 0.057242 ----
+test an epoch: 4.750347852706909
+
+Epoch 15  test loss:  0.10980089840789636 
+test ed f1:  0.741614906832298  test ae f1:  0
+Epoch 16
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.925512 -------
+--- Trigger Identification ---
+ P: 0.939419 R: 0.894311 F1: 0.916310
+--- Trigger Classification ---
+ P: 0.931469 R: 0.886743 F1: 0.908556
+---- seq loss : 0.007288 -----
+--- class loss : 0.061215 ----
+train an epoch: 350.00266909599304
+
+Epoch 16  training loss:  0.9255119847836873  training ed f1:  0.9085561497326203  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.107132 -------
+--- Trigger Identification ---
+ P: 0.610553 R: 0.678771 F1: 0.642857
+--- Trigger Classification ---
+ P: 0.585427 R: 0.650838 F1: 0.616402
+---- seq loss : 0.067895 -----
+--- class loss : 0.043596 ----
+
+Epoch 16  dev loss:  0.10713228712288234 
+dev ed f1:  0.6164021164021165  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.116231 -------
+--- Trigger Identification ---
+ P: 0.713574 R: 0.771198 F1: 0.741268
+--- Trigger Classification ---
+ P: 0.696139 R: 0.752355 F1: 0.723157
+---- seq loss : 0.066626 -----
+--- class loss : 0.055117 ----
+test an epoch: 4.7857561111450195
+
+Epoch 16  test loss:  0.11623116806149483 
+test ed f1:  0.723156532988357  test ae f1:  0
+Epoch 17
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.894820 -------
+--- Trigger Identification ---
+ P: 0.945953 R: 0.908925 F1: 0.927069
+--- Trigger Classification ---
+ P: 0.936991 R: 0.900313 F1: 0.918286
+---- seq loss : 0.006732 -----
+--- class loss : 0.059206 ----
+train an epoch: 349.83966636657715
+
+Epoch 17  training loss:  0.894819576334348  training ed f1:  0.9182858663827521  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.095032 -------
+--- Trigger Identification ---
+ P: 0.637500 R: 0.712291 F1: 0.672823
+--- Trigger Classification ---
+ P: 0.610000 R: 0.681564 F1: 0.643799
+---- seq loss : 0.057389 -----
+--- class loss : 0.041826 ----
+
+Epoch 17  dev loss:  0.09503180590959695 
+dev ed f1:  0.6437994722955145  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.103584 -------
+--- Trigger Identification ---
+ P: 0.735115 R: 0.814266 F1: 0.772669
+--- Trigger Classification ---
+ P: 0.724180 R: 0.802153 F1: 0.761175
+---- seq loss : 0.055699 -----
+--- class loss : 0.053205 ----
+test an epoch: 4.850385427474976
+
+Epoch 17  test loss:  0.10358382761478424 
+test ed f1:  0.7611749680715199  test ae f1:  0
+Save best model at Epoch 17 best_score:  0.7611749680715199
+Epoch 18
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.866127 -------
+--- Trigger Identification ---
+ P: 0.954889 R: 0.922495 F1: 0.938413
+--- Trigger Classification ---
+ P: 0.948136 R: 0.915971 F1: 0.931776
+---- seq loss : 0.005824 -----
+--- class loss : 0.057354 ----
+train an epoch: 350.2704293727875
+
+Epoch 18  training loss:  0.8661266648134517  training ed f1:  0.9317759490310592  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.099768 -------
+--- Trigger Identification ---
+ P: 0.643229 R: 0.689944 F1: 0.665768
+--- Trigger Classification ---
+ P: 0.617188 R: 0.662011 F1: 0.638814
+---- seq loss : 0.063605 -----
+--- class loss : 0.040181 ----
+
+Epoch 18  dev loss:  0.09976814751728223 
+dev ed f1:  0.6388140161725067  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.108076 -------
+--- Trigger Identification ---
+ P: 0.741688 R: 0.780619 F1: 0.760656
+--- Trigger Classification ---
+ P: 0.721228 R: 0.759085 F1: 0.739672
+---- seq loss : 0.061779 -----
+--- class loss : 0.051441 ----
+test an epoch: 4.792155027389526
+
+Epoch 18  test loss:  0.10807563774287701 
+test ed f1:  0.7396721311475409  test ae f1:  0
+Epoch 19
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.839937 -------
+--- Trigger Identification ---
+ P: 0.959096 R: 0.930063 F1: 0.944356
+--- Trigger Classification ---
+ P: 0.952637 R: 0.923800 F1: 0.937997
+---- seq loss : 0.005203 -----
+--- class loss : 0.055649 ----
+train an epoch: 350.65212225914
+
+Epoch 19  training loss:  0.839936829618205  training ed f1:  0.9379968203497615  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.095897 -------
+--- Trigger Identification ---
+ P: 0.712025 R: 0.628492 F1: 0.667656
+--- Trigger Classification ---
+ P: 0.680380 R: 0.600559 F1: 0.637982
+---- seq loss : 0.061070 -----
+--- class loss : 0.038697 ----
+
+Epoch 19  dev loss:  0.09589716204657005 
+dev ed f1:  0.6379821958456973  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.101355 -------
+--- Trigger Identification ---
+ P: 0.792857 R: 0.746972 F1: 0.769231
+--- Trigger Classification ---
+ P: 0.772857 R: 0.728129 F1: 0.749827
+---- seq loss : 0.056499 -----
+--- class loss : 0.049840 ----
+test an epoch: 4.7514731884002686
+
+Epoch 19  test loss:  0.10135521901150545 
+test ed f1:  0.7498267498267498  test ae f1:  0
+Epoch 20
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.816419 -------
+--- Trigger Identification ---
+ P: 0.959536 R: 0.928236 F1: 0.943626
+--- Trigger Classification ---
+ P: 0.953332 R: 0.922234 F1: 0.937525
+---- seq loss : 0.005435 -----
+--- class loss : 0.054066 ----
+train an epoch: 350.0262084007263
+
+Epoch 20  training loss:  0.8164187367372298  training ed f1:  0.937524870672503  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.105542 -------
+--- Trigger Identification ---
+ P: 0.722045 R: 0.631285 F1: 0.673621
+--- Trigger Classification ---
+ P: 0.696486 R: 0.608939 F1: 0.649776
+---- seq loss : 0.071946 -----
+--- class loss : 0.037329 ----
+
+Epoch 20  dev loss:  0.10554192215204239 
+dev ed f1:  0.6497764530551415  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.102495 -------
+--- Trigger Identification ---
+ P: 0.848000 R: 0.713324 F1: 0.774854
+--- Trigger Classification ---
+ P: 0.833600 R: 0.701211 F1: 0.761696
+---- seq loss : 0.058968 -----
+--- class loss : 0.048363 ----
+test an epoch: 5.173688173294067
+
+Epoch 20  test loss:  0.10249488726258278 
+test ed f1:  0.7616959064327485  test ae f1:  0
+Save CPU model at Epoch 20 score:  0.6497764530551415
+Now testset score:  0.7616959064327485
+Save best model at Epoch 20 best_score:  0.7616959064327485
+Epoch 21
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.793874 -------
+--- Trigger Identification ---
+ P: 0.967400 R: 0.929280 F1: 0.947957
+--- Trigger Classification ---
+ P: 0.962239 R: 0.924322 F1: 0.942899
+---- seq loss : 0.004936 -----
+--- class loss : 0.052596 ----
+train an epoch: 350.4031252861023
+
+Epoch 21  training loss:  0.7938744017965351  training ed f1:  0.9428989751098096  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.104488 -------
+--- Trigger Identification ---
+ P: 0.552083 R: 0.740223 F1: 0.632458
+--- Trigger Classification ---
+ P: 0.514583 R: 0.689944 F1: 0.589499
+---- seq loss : 0.072013 -----
+--- class loss : 0.036083 ----
+
+Epoch 21  dev loss:  0.10448777603988464 
+dev ed f1:  0.5894988066825775  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.116345 -------
+--- Trigger Identification ---
+ P: 0.671795 R: 0.881561 F1: 0.762515
+--- Trigger Classification ---
+ P: 0.648205 R: 0.850606 F1: 0.735739
+---- seq loss : 0.074051 -----
+--- class loss : 0.046994 ----
+test an epoch: 4.761692047119141
+
+Epoch 21  test loss:  0.11634488652149837 
+test ed f1:  0.7357392316647265  test ae f1:  0
+Epoch 22
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.772994 -------
+--- Trigger Identification ---
+ P: 0.956140 R: 0.938674 F1: 0.947327
+--- Trigger Classification ---
+ P: 0.949495 R: 0.932150 F1: 0.940743
+---- seq loss : 0.004682 -----
+--- class loss : 0.051221 ----
+train an epoch: 350.0671446323395
+
+Epoch 22  training loss:  0.7729939789517432  training ed f1:  0.9407426915986304  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.104094 -------
+--- Trigger Identification ---
+ P: 0.609195 R: 0.740223 F1: 0.668348
+--- Trigger Classification ---
+ P: 0.574713 R: 0.698324 F1: 0.630517
+---- seq loss : 0.072665 -----
+--- class loss : 0.034921 ----
+
+Epoch 22  dev loss:  0.1040937972183411 
+dev ed f1:  0.6305170239596469  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.112629 -------
+--- Trigger Identification ---
+ P: 0.722161 R: 0.881561 F1: 0.793939
+--- Trigger Classification ---
+ P: 0.694598 R: 0.847914 F1: 0.763636
+---- seq loss : 0.071477 -----
+--- class loss : 0.045725 ----
+test an epoch: 4.762887716293335
+
+Epoch 22  test loss:  0.11262927862505118 
+test ed f1:  0.7636363636363637  test ae f1:  0
+Save best model at Epoch 22 best_score:  0.7636363636363637
+Epoch 23
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.753430 -------
+--- Trigger Identification ---
+ P: 0.965444 R: 0.947808 F1: 0.956545
+--- Trigger Classification ---
+ P: 0.957735 R: 0.940240 F1: 0.948907
+---- seq loss : 0.004508 -----
+--- class loss : 0.049928 ----
+train an epoch: 350.1552367210388
+
+Epoch 23  training loss:  0.7534301519295238  training ed f1:  0.9489070318672637  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.099040 -------
+--- Trigger Identification ---
+ P: 0.691667 R: 0.695531 F1: 0.693593
+--- Trigger Classification ---
+ P: 0.663889 R: 0.667598 F1: 0.665738
+---- seq loss : 0.068595 -----
+--- class loss : 0.033828 ----
+
+Epoch 23  dev loss:  0.09904005994590429 
+dev ed f1:  0.6657381615598885  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.108363 -------
+--- Trigger Identification ---
+ P: 0.700903 R: 0.835801 F1: 0.762431
+--- Trigger Classification ---
+ P: 0.677201 R: 0.807537 F1: 0.736648
+---- seq loss : 0.068306 -----
+--- class loss : 0.044508 ----
+test an epoch: 5.131502389907837
+
+Epoch 23  test loss:  0.10836325275401275 
+test ed f1:  0.7366482504604053  test ae f1:  0
+Save CPU model at Epoch 23 score:  0.6657381615598885
+Now testset score:  0.7366482504604053
+Epoch 24
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.734385 -------
+--- Trigger Identification ---
+ P: 0.974188 R: 0.955376 F1: 0.964690
+--- Trigger Classification ---
+ P: 0.968866 R: 0.950157 F1: 0.959420
+---- seq loss : 0.003761 -----
+--- class loss : 0.048708 ----
+train an epoch: 349.5874750614166
+
+Epoch 24  training loss:  0.7343852117114904  training ed f1:  0.9594202898550724  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.104740 -------
+--- Trigger Identification ---
+ P: 0.688385 R: 0.678771 F1: 0.683544
+--- Trigger Classification ---
+ P: 0.665722 R: 0.656425 F1: 0.661041
+---- seq loss : 0.075220 -----
+--- class loss : 0.032799 ----
+
+Epoch 24  dev loss:  0.10473979307481876 
+dev ed f1:  0.6610407876230661  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.100286 -------
+--- Trigger Identification ---
+ P: 0.778195 R: 0.835801 F1: 0.805970
+--- Trigger Classification ---
+ P: 0.763158 R: 0.819650 F1: 0.790396
+---- seq loss : 0.061276 -----
+--- class loss : 0.043345 ----
+test an epoch: 4.727980375289917
+
+Epoch 24  test loss:  0.10028649407128493 
+test ed f1:  0.790395846852693  test ae f1:  0
+Save best model at Epoch 24 best_score:  0.790395846852693
+Epoch 25
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.716517 -------
+--- Trigger Identification ---
+ P: 0.979412 R: 0.955898 F1: 0.967512
+--- Trigger Classification ---
+ P: 0.973797 R: 0.950418 F1: 0.961965
+---- seq loss : 0.003290 -----
+--- class loss : 0.047548 ----
+train an epoch: 349.96190786361694
+
+Epoch 25  training loss:  0.7165165366173185  training ed f1:  0.9619651347068146  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.106730 -------
+--- Trigger Identification ---
+ P: 0.595402 R: 0.723464 F1: 0.653216
+--- Trigger Classification ---
+ P: 0.572414 R: 0.695531 F1: 0.627995
+---- seq loss : 0.078093 -----
+--- class loss : 0.031819 ----
+
+Epoch 25  dev loss:  0.10673000240841737 
+dev ed f1:  0.6279949558638083  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.113574 -------
+--- Trigger Identification ---
+ P: 0.667009 R: 0.873486 F1: 0.756410
+--- Trigger Classification ---
+ P: 0.651593 R: 0.853297 F1: 0.738928
+---- seq loss : 0.075558 -----
+--- class loss : 0.042240 ----
+test an epoch: 4.736057996749878
+
+Epoch 25  test loss:  0.1135740784307321 
+test ed f1:  0.7389277389277389  test ae f1:  0
+Epoch 26
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.699589 -------
+--- Trigger Identification ---
+ P: 0.977454 R: 0.961639 F1: 0.969482
+--- Trigger Classification ---
+ P: 0.972414 R: 0.956681 F1: 0.964483
+---- seq loss : 0.002971 -----
+--- class loss : 0.046441 ----
+train an epoch: 350.0558989048004
+
+Epoch 26  training loss:  0.6995893228289242  training ed f1:  0.9644830307813732  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.108189 -------
+--- Trigger Identification ---
+ P: 0.606407 R: 0.740223 F1: 0.666667
+--- Trigger Classification ---
+ P: 0.576659 R: 0.703911 F1: 0.633962
+---- seq loss : 0.080389 -----
+--- class loss : 0.030889 ----
+
+Epoch 26  dev loss:  0.10818941747912994 
+dev ed f1:  0.6339622641509435  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.107790 -------
+--- Trigger Identification ---
+ P: 0.704148 R: 0.868102 F1: 0.777577
+--- Trigger Classification ---
+ P: 0.683406 R: 0.842530 F1: 0.754671
+---- seq loss : 0.070724 -----
+--- class loss : 0.041185 ----
+test an epoch: 5.210970878601074
+
+Epoch 26  test loss:  0.10779030174016953 
+test ed f1:  0.7546714888487042  test ae f1:  0
+Epoch 27
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.683618 -------
+--- Trigger Identification ---
+ P: 0.979095 R: 0.965553 F1: 0.972277
+--- Trigger Classification ---
+ P: 0.975920 R: 0.962422 F1: 0.969124
+---- seq loss : 0.002887 -----
+--- class loss : 0.045382 ----
+train an epoch: 349.3821520805359
+
+Epoch 27  training loss:  0.6836176641433445  training ed f1:  0.9691236368414138  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.103657 -------
+--- Trigger Identification ---
+ P: 0.600887 R: 0.756983 F1: 0.669963
+--- Trigger Classification ---
+ P: 0.567627 R: 0.715084 F1: 0.632880
+---- seq loss : 0.076653 -----
+--- class loss : 0.030004 ----
+
+Epoch 27  dev loss:  0.10365707026078151 
+dev ed f1:  0.6328800988875155  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.114918 -------
+--- Trigger Identification ---
+ P: 0.694989 R: 0.858681 F1: 0.768212
+--- Trigger Classification ---
+ P: 0.674292 R: 0.833109 F1: 0.745334
+---- seq loss : 0.078764 -----
+--- class loss : 0.040171 ----
+test an epoch: 4.751770496368408
+
+Epoch 27  test loss:  0.11491819123427073 
+test ed f1:  0.7453341360626128  test ae f1:  0
+Epoch 28
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.668671 -------
+--- Trigger Identification ---
+ P: 0.976517 R: 0.965814 F1: 0.971136
+--- Trigger Classification ---
+ P: 0.974142 R: 0.963466 F1: 0.968775
+---- seq loss : 0.003162 -----
+--- class loss : 0.044367 ----
+train an epoch: 349.5906443595886
+
+Epoch 28  training loss:  0.6686707311957483  training ed f1:  0.968774599842561  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.107055 -------
+--- Trigger Identification ---
+ P: 0.598655 R: 0.745810 F1: 0.664179
+--- Trigger Classification ---
+ P: 0.560538 R: 0.698324 F1: 0.621891
+---- seq loss : 0.080801 -----
+--- class loss : 0.029172 ----
+
+Epoch 28  dev loss:  0.10705507446367007 
+dev ed f1:  0.6218905472636815  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.116726 -------
+--- Trigger Identification ---
+ P: 0.687500 R: 0.873486 F1: 0.769413
+--- Trigger Classification ---
+ P: 0.671610 R: 0.853297 F1: 0.751630
+---- seq loss : 0.081436 -----
+--- class loss : 0.039211 ----
+test an epoch: 4.7581610679626465
+
+Epoch 28  test loss:  0.11672555779417355 
+test ed f1:  0.7516301126259632  test ae f1:  0
+Epoch 29
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.653829 -------
+--- Trigger Identification ---
+ P: 0.974934 R: 0.964248 F1: 0.969562
+--- Trigger Classification ---
+ P: 0.971768 R: 0.961117 F1: 0.966413
+---- seq loss : 0.002988 -----
+--- class loss : 0.043389 ----
+train an epoch: 349.6484911441803
+
+Epoch 29  training loss:  0.6538285273713189  training ed f1:  0.9664130149567042  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.099643 -------
+--- Trigger Identification ---
+ P: 0.655612 R: 0.717877 F1: 0.685333
+--- Trigger Classification ---
+ P: 0.622449 R: 0.681564 F1: 0.650667
+---- seq loss : 0.074127 -----
+--- class loss : 0.028351 ----
+
+Epoch 29  dev loss:  0.0996432864608673 
+dev ed f1:  0.6506666666666667  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.107831 -------
+--- Trigger Identification ---
+ P: 0.710322 R: 0.861373 F1: 0.778589
+--- Trigger Classification ---
+ P: 0.698113 R: 0.846568 F1: 0.765207
+---- seq loss : 0.073393 -----
+--- class loss : 0.038265 ----
+test an epoch: 4.767327070236206
+
+Epoch 29  test loss:  0.10783149190247059 
+test ed f1:  0.7652068126520681  test ae f1:  0
+Epoch 30
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.639555 -------
+--- Trigger Identification ---
+ P: 0.983073 R: 0.969990 F1: 0.976488
+--- Trigger Classification ---
+ P: 0.980164 R: 0.967119 F1: 0.973598
+---- seq loss : 0.002884 -----
+--- class loss : 0.042445 ----
+train an epoch: 349.87052726745605
+
+Epoch 30  training loss:  0.6395549723142491  training ed f1:  0.973597793248391  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.100814 -------
+--- Trigger Identification ---
+ P: 0.648101 R: 0.715084 F1: 0.679947
+--- Trigger Classification ---
+ P: 0.622785 R: 0.687151 F1: 0.653386
+---- seq loss : 0.075998 -----
+--- class loss : 0.027573 ----
+
+Epoch 30  dev loss:  0.10081441664638427 
+dev ed f1:  0.6533864541832668  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.105508 -------
+--- Trigger Identification ---
+ P: 0.731959 R: 0.860027 F1: 0.790842
+--- Trigger Classification ---
+ P: 0.713631 R: 0.838493 F1: 0.771040
+---- seq loss : 0.071890 -----
+--- class loss : 0.037353 ----
+test an epoch: 4.749229431152344
+
+Epoch 30  test loss:  0.10550750071803729 
+test ed f1:  0.771039603960396  test ae f1:  0
+Epoch 31
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.625156 -------
+--- Trigger Identification ---
+ P: 0.985252 R: 0.976253 F1: 0.980731
+--- Trigger Classification ---
+ P: 0.982881 R: 0.973904 F1: 0.978372
+---- seq loss : 0.002238 -----
+--- class loss : 0.041528 ----
+train an epoch: 349.7182397842407
+
+Epoch 31  training loss:  0.6251557655097962  training ed f1:  0.9783720015729453  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.105793 -------
+--- Trigger Identification ---
+ P: 0.677596 R: 0.692737 F1: 0.685083
+--- Trigger Classification ---
+ P: 0.642077 R: 0.656425 F1: 0.649171
+---- seq loss : 0.081653 -----
+--- class loss : 0.026823 ----
+
+Epoch 31  dev loss:  0.10579347008695969 
+dev ed f1:  0.649171270718232  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.114022 -------
+--- Trigger Identification ---
+ P: 0.709497 R: 0.854643 F1: 0.775336
+--- Trigger Classification ---
+ P: 0.691620 R: 0.833109 F1: 0.755800
+---- seq loss : 0.081201 -----
+--- class loss : 0.036468 ----
+test an epoch: 4.767142295837402
+
+Epoch 31  test loss:  0.11402210953334967 
+test ed f1:  0.7557997557997558  test ae f1:  0
+Epoch 32
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.611990 -------
+--- Trigger Identification ---
+ P: 0.981579 R: 0.973382 F1: 0.977463
+--- Trigger Classification ---
+ P: 0.978421 R: 0.970251 F1: 0.974319
+---- seq loss : 0.002405 -----
+--- class loss : 0.040639 ----
+train an epoch: 349.4122750759125
+
+Epoch 32  training loss:  0.6119899413451783  training ed f1:  0.9743186582809223  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.102917 -------
+--- Trigger Identification ---
+ P: 0.637470 R: 0.731844 F1: 0.681404
+--- Trigger Classification ---
+ P: 0.603406 R: 0.692737 F1: 0.644993
+---- seq loss : 0.079433 -----
+--- class loss : 0.026093 ----
+
+Epoch 32  dev loss:  0.10291716907746516 
+dev ed f1:  0.6449934980494149  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.100985 -------
+--- Trigger Identification ---
+ P: 0.719956 R: 0.878869 F1: 0.791515
+--- Trigger Classification ---
+ P: 0.703418 R: 0.858681 F1: 0.773333
+---- seq loss : 0.068937 -----
+--- class loss : 0.035610 ----
+test an epoch: 4.74743127822876
+
+Epoch 32  test loss:  0.10098538485666116 
+test ed f1:  0.7733333333333332  test ae f1:  0
+Epoch 33
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.598930 -------
+--- Trigger Identification ---
+ P: 0.984996 R: 0.976514 F1: 0.980736
+--- Trigger Classification ---
+ P: 0.982627 R: 0.974165 F1: 0.978378
+---- seq loss : 0.002292 -----
+--- class loss : 0.039776 ----
+train an epoch: 349.58778405189514
+
+Epoch 33  training loss:  0.5989304849832724  training ed f1:  0.9783776700301402  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.106240 -------
+--- Trigger Identification ---
+ P: 0.590090 R: 0.731844 F1: 0.653367
+--- Trigger Classification ---
+ P: 0.547297 R: 0.678771 F1: 0.605985
+---- seq loss : 0.083392 -----
+--- class loss : 0.025387 ----
+
+Epoch 33  dev loss:  0.10623989698405449 
+dev ed f1:  0.6059850374064838  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.111878 -------
+--- Trigger Identification ---
+ P: 0.674948 R: 0.877524 F1: 0.763019
+--- Trigger Classification ---
+ P: 0.648033 R: 0.842530 F1: 0.732592
+---- seq loss : 0.080578 -----
+--- class loss : 0.034778 ----
+test an epoch: 4.769153356552124
+
+Epoch 33  test loss:  0.11187781219681105 
+test ed f1:  0.7325921591574021  test ae f1:  0
+Epoch 34
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.586218 -------
+--- Trigger Identification ---
+ P: 0.986067 R: 0.978862 F1: 0.982452
+--- Trigger Classification ---
+ P: 0.983964 R: 0.976775 F1: 0.980356
+---- seq loss : 0.002148 -----
+--- class loss : 0.038938 ----
+train an epoch: 349.92920660972595
+
+Epoch 34  training loss:  0.5862176080355647  training ed f1:  0.9803562074384494  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.101428 -------
+--- Trigger Identification ---
+ P: 0.671159 R: 0.695531 F1: 0.683128
+--- Trigger Classification ---
+ P: 0.638814 R: 0.662011 F1: 0.650206
+---- seq loss : 0.079196 -----
+--- class loss : 0.024702 ----
+
+Epoch 34  dev loss:  0.10142790318395083 
+dev ed f1:  0.6502057613168725  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.095117 -------
+--- Trigger Identification ---
+ P: 0.769890 R: 0.846568 F1: 0.806410
+--- Trigger Classification ---
+ P: 0.750306 R: 0.825034 F1: 0.785897
+---- seq loss : 0.064553 -----
+--- class loss : 0.033960 ----
+test an epoch: 4.780580759048462
+
+Epoch 34  test loss:  0.09511746565500895 
+test ed f1:  0.7858974358974358  test ae f1:  0
+Epoch 35
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.573878 -------
+--- Trigger Identification ---
+ P: 0.983744 R: 0.979123 F1: 0.981428
+--- Trigger Classification ---
+ P: 0.981122 R: 0.976514 F1: 0.978812
+---- seq loss : 0.002094 -----
+--- class loss : 0.038119 ----
+train an epoch: 349.5819492340088
+
+Epoch 35  training loss:  0.5738778535367111  training ed f1:  0.9788124509547476  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.106098 -------
+--- Trigger Identification ---
+ P: 0.610245 R: 0.765363 F1: 0.679058
+--- Trigger Classification ---
+ P: 0.583519 R: 0.731844 F1: 0.649318
+---- seq loss : 0.084462 -----
+--- class loss : 0.024040 ----
+
+Epoch 35  dev loss:  0.10609800805552648 
+dev ed f1:  0.6493184634448574  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.115318 -------
+--- Trigger Identification ---
+ P: 0.669007 R: 0.897712 F1: 0.766667
+--- Trigger Classification ---
+ P: 0.647944 R: 0.869448 F1: 0.742529
+---- seq loss : 0.085470 -----
+--- class loss : 0.033164 ----
+test an epoch: 5.240471601486206
+
+Epoch 35  test loss:  0.11531751528382302 
+test ed f1:  0.742528735632184  test ae f1:  0
+Epoch 36
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.561800 -------
+--- Trigger Identification ---
+ P: 0.986064 R: 0.978601 F1: 0.982318
+--- Trigger Classification ---
+ P: 0.984749 R: 0.977296 F1: 0.981009
+---- seq loss : 0.002004 -----
+--- class loss : 0.037320 ----
+train an epoch: 349.72849559783936
+
+Epoch 36  training loss:  0.5617995151579709  training ed f1:  0.9810085134250164  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.100431 -------
+--- Trigger Identification ---
+ P: 0.675532 R: 0.709497 F1: 0.692098
+--- Trigger Classification ---
+ P: 0.640957 R: 0.673184 F1: 0.656676
+---- seq loss : 0.079369 -----
+--- class loss : 0.023402 ----
+
+Epoch 36  dev loss:  0.10043122458200042 
+dev ed f1:  0.6566757493188011  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.106311 -------
+--- Trigger Identification ---
+ P: 0.705240 R: 0.869448 F1: 0.778782
+--- Trigger Classification ---
+ P: 0.687773 R: 0.847914 F1: 0.759494
+---- seq loss : 0.077162 -----
+--- class loss : 0.032388 ----
+test an epoch: 4.752523422241211
+
+Epoch 36  test loss:  0.10631108122567336 
+test ed f1:  0.759493670886076  test ae f1:  0
+Epoch 37
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.549981 -------
+--- Trigger Identification ---
+ P: 0.984244 R: 0.978079 F1: 0.981152
+--- Trigger Classification ---
+ P: 0.982931 R: 0.976775 F1: 0.979843
+---- seq loss : 0.001863 -----
+--- class loss : 0.036541 ----
+train an epoch: 349.99464297294617
+
+Epoch 37  training loss:  0.549980541937892  training ed f1:  0.9798429319371726  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.109228 -------
+--- Trigger Identification ---
+ P: 0.623529 R: 0.740223 F1: 0.676884
+--- Trigger Classification ---
+ P: 0.583529 R: 0.692737 F1: 0.633461
+---- seq loss : 0.088730 -----
+--- class loss : 0.022776 ----
+
+Epoch 37  dev loss:  0.10922824648710397 
+dev ed f1:  0.6334610472541508  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.117787 -------
+--- Trigger Identification ---
+ P: 0.674098 R: 0.854643 F1: 0.753709
+--- Trigger Classification ---
+ P: 0.657113 R: 0.833109 F1: 0.734718
+---- seq loss : 0.089314 -----
+--- class loss : 0.031636 ----
+test an epoch: 4.810138702392578
+
+Epoch 37  test loss:  0.11778660491108894 
+test ed f1:  0.7347181008902077  test ae f1:  0
+Epoch 38
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.538749 -------
+--- Trigger Identification ---
+ P: 0.982180 R: 0.978079 F1: 0.980126
+--- Trigger Classification ---
+ P: 0.980608 R: 0.976514 F1: 0.978556
+---- seq loss : 0.002078 -----
+--- class loss : 0.035778 ----
+train an epoch: 352.6815176010132
+
+Epoch 38  training loss:  0.538748990546986  training ed f1:  0.9785564853556485  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.109129 -------
+--- Trigger Identification ---
+ P: 0.661499 R: 0.715084 F1: 0.687248
+--- Trigger Classification ---
+ P: 0.617571 R: 0.667598 F1: 0.641611
+---- seq loss : 0.089182 -----
+--- class loss : 0.022163 ----
+
+Epoch 38  dev loss:  0.10912895073684362 
+dev ed f1:  0.6416107382550336  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.108220 -------
+--- Trigger Identification ---
+ P: 0.704545 R: 0.876178 F1: 0.781044
+--- Trigger Classification ---
+ P: 0.686147 R: 0.853297 F1: 0.760648
+---- seq loss : 0.080423 -----
+--- class loss : 0.030885 ----
+test an epoch: 5.149598121643066
+
+Epoch 38  test loss:  0.10821997796495755 
+test ed f1:  0.7606478704259149  test ae f1:  0
+Epoch 39
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.527312 -------
+--- Trigger Identification ---
+ P: 0.986642 R: 0.983038 F1: 0.984837
+--- Trigger Classification ---
+ P: 0.984547 R: 0.980950 F1: 0.982745
+---- seq loss : 0.001854 -----
+--- class loss : 0.035031 ----
+train an epoch: 353.1155889034271
+
+Epoch 39  training loss:  0.5273118752587348  training ed f1:  0.9827450980392157  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.099283 -------
+--- Trigger Identification ---
+ P: 0.654731 R: 0.715084 F1: 0.683578
+--- Trigger Classification ---
+ P: 0.608696 R: 0.664804 F1: 0.635514
+---- seq loss : 0.079870 -----
+--- class loss : 0.021570 ----
+
+Epoch 39  dev loss:  0.09928285180089566 
+dev ed f1:  0.6355140186915887  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.102098 -------
+--- Trigger Identification ---
+ P: 0.739953 R: 0.842530 F1: 0.787917
+--- Trigger Classification ---
+ P: 0.721040 R: 0.820996 F1: 0.767778
+---- seq loss : 0.074958 -----
+--- class loss : 0.030156 ----
+test an epoch: 5.204203128814697
+
+Epoch 39  test loss:  0.10209823374946912 
+test ed f1:  0.7677784770295784  test ae f1:  0
+Epoch 40
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.516033 -------
+--- Trigger Identification ---
+ P: 0.988461 R: 0.983559 F1: 0.986004
+--- Trigger Classification ---
+ P: 0.985838 R: 0.980950 F1: 0.983388
+---- seq loss : 0.001546 -----
+--- class loss : 0.034299 ----
+train an epoch: 351.2062005996704
+
+Epoch 40  training loss:  0.5160334656306976  training ed f1:  0.9833878351863964  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.099550 -------
+--- Trigger Identification ---
+ P: 0.648515 R: 0.731844 F1: 0.687664
+--- Trigger Classification ---
+ P: 0.603960 R: 0.681564 F1: 0.640420
+---- seq loss : 0.080662 -----
+--- class loss : 0.020987 ----
+
+Epoch 40  dev loss:  0.09955026943666431 
+dev ed f1:  0.6404199475065616  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.102556 -------
+--- Trigger Identification ---
+ P: 0.711497 R: 0.882907 F1: 0.787988
+--- Trigger Classification ---
+ P: 0.686551 R: 0.851952 F1: 0.760360
+---- seq loss : 0.076063 -----
+--- class loss : 0.029437 ----
+test an epoch: 4.759367942810059
+
+Epoch 40  test loss:  0.1025563665976127 
+test ed f1:  0.7603603603603604  test ae f1:  0
+Epoch 41
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.505327 -------
+--- Trigger Identification ---
+ P: 0.986402 R: 0.984342 F1: 0.985371
+--- Trigger Classification ---
+ P: 0.983525 R: 0.981472 F1: 0.982497
+---- seq loss : 0.001613 -----
+--- class loss : 0.033581 ----
+train an epoch: 349.8021140098572
+
+Epoch 41  training loss:  0.505327053583961  training ed f1:  0.9824973876698014  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.097625 -------
+--- Trigger Identification ---
+ P: 0.620690 R: 0.754190 F1: 0.680958
+--- Trigger Classification ---
+ P: 0.581609 R: 0.706704 F1: 0.638083
+---- seq loss : 0.079245 -----
+--- class loss : 0.020422 ----
+
+Epoch 41  dev loss:  0.0976250605800977 
+dev ed f1:  0.6380832282471627  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.101611 -------
+--- Trigger Identification ---
+ P: 0.684805 R: 0.897712 F1: 0.776937
+--- Trigger Classification ---
+ P: 0.657084 R: 0.861373 F1: 0.745486
+---- seq loss : 0.075748 -----
+--- class loss : 0.028736 ----
+test an epoch: 4.750863075256348
+
+Epoch 41  test loss:  0.10161111888786158 
+test ed f1:  0.745486313337216  test ae f1:  0
+Epoch 42
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.494892 -------
+--- Trigger Identification ---
+ P: 0.986387 R: 0.983299 F1: 0.984841
+--- Trigger Classification ---
+ P: 0.985340 R: 0.982255 F1: 0.983795
+---- seq loss : 0.001741 -----
+--- class loss : 0.032877 ----
+train an epoch: 350.5719647407532
+
+Epoch 42  training loss:  0.4948917825050471  training ed f1:  0.9837950862519603  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.099317 -------
+--- Trigger Identification ---
+ P: 0.627315 R: 0.756983 F1: 0.686076
+--- Trigger Classification ---
+ P: 0.585648 R: 0.706704 F1: 0.640506
+---- seq loss : 0.081433 -----
+--- class loss : 0.019872 ----
+
+Epoch 42  dev loss:  0.09931738065698972 
+dev ed f1:  0.640506329113924  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.100886 -------
+--- Trigger Identification ---
+ P: 0.721058 R: 0.880215 F1: 0.792727
+--- Trigger Classification ---
+ P: 0.700110 R: 0.854643 F1: 0.769697
+---- seq loss : 0.075640 -----
+--- class loss : 0.028051 ----
+test an epoch: 4.78777003288269
+
+Epoch 42  test loss:  0.10088599907855193 
+test ed f1:  0.7696969696969697  test ae f1:  0
+Epoch 43
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.484249 -------
+--- Trigger Identification ---
+ P: 0.988226 R: 0.985647 F1: 0.986935
+--- Trigger Classification ---
+ P: 0.985086 R: 0.982516 F1: 0.983799
+---- seq loss : 0.001454 -----
+--- class loss : 0.032186 ----
+train an epoch: 350.641761302948
+
+Epoch 43  training loss:  0.4842494068601504  training ed f1:  0.983799320616671  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.105279 -------
+--- Trigger Identification ---
+ P: 0.626761 R: 0.745810 F1: 0.681122
+--- Trigger Classification ---
+ P: 0.589202 R: 0.701117 F1: 0.640306
+---- seq loss : 0.087875 -----
+--- class loss : 0.019337 ----
+
+Epoch 43  dev loss:  0.10527858460465303 
+dev ed f1:  0.6403061224489796  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.104078 -------
+--- Trigger Identification ---
+ P: 0.736127 R: 0.874832 F1: 0.799508
+--- Trigger Classification ---
+ P: 0.712344 R: 0.846568 F1: 0.773678
+---- seq loss : 0.079432 -----
+--- class loss : 0.027384 ----
+test an epoch: 5.041145086288452
+
+Epoch 43  test loss:  0.10407824565966924 
+test ed f1:  0.7736777367773677  test ae f1:  0
+Epoch 44
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.474240 -------
+--- Trigger Identification ---
+ P: 0.988467 R: 0.984081 F1: 0.986269
+--- Trigger Classification ---
+ P: 0.987680 R: 0.983299 F1: 0.985485
+---- seq loss : 0.001612 -----
+--- class loss : 0.031508 ----
+train an epoch: 351.7224977016449
+
+Epoch 44  training loss:  0.4742396441463044  training ed f1:  0.9854845037269517  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.100963 -------
+--- Trigger Identification ---
+ P: 0.693548 R: 0.720670 F1: 0.706849
+--- Trigger Classification ---
+ P: 0.645161 R: 0.670391 F1: 0.657534
+---- seq loss : 0.084030 -----
+--- class loss : 0.018815 ----
+
+Epoch 44  dev loss:  0.10096307885116683 
+dev ed f1:  0.6575342465753424  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.095111 -------
+--- Trigger Identification ---
+ P: 0.756853 R: 0.854643 F1: 0.802781
+--- Trigger Classification ---
+ P: 0.740167 R: 0.835801 F1: 0.785082
+---- seq loss : 0.071055 -----
+--- class loss : 0.026729 ----
+test an epoch: 4.766572713851929
+
+Epoch 44  test loss:  0.09511119139691195 
+test ed f1:  0.7850821744627055  test ae f1:  0
+Epoch 45
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.464300 -------
+--- Trigger Identification ---
+ P: 0.986155 R: 0.985125 F1: 0.985640
+--- Trigger Classification ---
+ P: 0.984326 R: 0.983299 F1: 0.983812
+---- seq loss : 0.001658 -----
+--- class loss : 0.030843 ----
+train an epoch: 351.0570991039276
+
+Epoch 45  training loss:  0.46429956795660077  training ed f1:  0.9838120104438641  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.109869 -------
+--- Trigger Identification ---
+ P: 0.650510 R: 0.712291 F1: 0.680000
+--- Trigger Classification ---
+ P: 0.602041 R: 0.659218 F1: 0.629333
+---- seq loss : 0.093392 -----
+--- class loss : 0.018308 ----
+
+Epoch 45  dev loss:  0.10986921003159995 
+dev ed f1:  0.6293333333333333  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.106026 -------
+--- Trigger Identification ---
+ P: 0.770574 R: 0.831763 F1: 0.800000
+--- Trigger Classification ---
+ P: 0.740648 R: 0.799462 F1: 0.768932
+---- seq loss : 0.082545 -----
+--- class loss : 0.026089 ----
+test an epoch: 4.80285382270813
+
+Epoch 45  test loss:  0.1060257826000452 
+test ed f1:  0.7689320388349515  test ae f1:  0
+Epoch 46
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.454680 -------
+--- Trigger Identification ---
+ P: 0.983594 R: 0.985647 F1: 0.984619
+--- Trigger Classification ---
+ P: 0.981510 R: 0.983559 F1: 0.982534
+---- seq loss : 0.001847 -----
+--- class loss : 0.030189 ----
+train an epoch: 352.08219742774963
+
+Epoch 46  training loss:  0.454679535946523  training ed f1:  0.9825338894681962  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.105231 -------
+--- Trigger Identification ---
+ P: 0.563786 R: 0.765363 F1: 0.649289
+--- Trigger Classification ---
+ P: 0.534979 R: 0.726257 F1: 0.616114
+---- seq loss : 0.089201 -----
+--- class loss : 0.017811 ----
+
+Epoch 46  dev loss:  0.1052305251897241 
+dev ed f1:  0.6161137440758293  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.107817 -------
+--- Trigger Identification ---
+ P: 0.688708 R: 0.911171 F1: 0.784473
+--- Trigger Classification ---
+ P: 0.669379 R: 0.885599 F1: 0.762457
+---- seq loss : 0.084902 -----
+--- class loss : 0.025461 ----
+test an epoch: 4.741810321807861
+
+Epoch 46  test loss:  0.10781737839182218 
+test ed f1:  0.7624565469293163  test ae f1:  0
+Epoch 47
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.444961 -------
+--- Trigger Identification ---
+ P: 0.986921 R: 0.984603 F1: 0.985761
+--- Trigger Classification ---
+ P: 0.986137 R: 0.983820 F1: 0.984977
+---- seq loss : 0.001726 -----
+--- class loss : 0.029549 ----
+train an epoch: 351.6711974143982
+
+Epoch 47  training loss:  0.4449612790447296  training ed f1:  0.984977139124755  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.101528 -------
+--- Trigger Identification ---
+ P: 0.633663 R: 0.715084 F1: 0.671916
+--- Trigger Classification ---
+ P: 0.594059 R: 0.670391 F1: 0.629921
+---- seq loss : 0.085921 -----
+--- class loss : 0.017341 ----
+
+Epoch 47  dev loss:  0.10152782306361657 
+dev ed f1:  0.6299212598425197  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.103965 -------
+--- Trigger Identification ---
+ P: 0.729332 R: 0.866756 F1: 0.792128
+--- Trigger Classification ---
+ P: 0.712344 R: 0.846568 F1: 0.773678
+---- seq loss : 0.081594 -----
+--- class loss : 0.024857 ----
+test an epoch: 4.888140678405762
+
+Epoch 47  test loss:  0.10396530826886495 
+test ed f1:  0.7736777367773677  test ae f1:  0
+Epoch 48
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.435516 -------
+--- Trigger Identification ---
+ P: 0.987425 R: 0.983559 F1: 0.985488
+--- Trigger Classification ---
+ P: 0.986115 R: 0.982255 F1: 0.984181
+---- seq loss : 0.001738 -----
+--- class loss : 0.028918 ----
+train an epoch: 351.4768843650818
+
+Epoch 48  training loss:  0.4355157669304683  training ed f1:  0.9841809386847955  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.104949 -------
+--- Trigger Identification ---
+ P: 0.668407 R: 0.715084 F1: 0.690958
+--- Trigger Classification ---
+ P: 0.618799 R: 0.662011 F1: 0.639676
+---- seq loss : 0.089764 -----
+--- class loss : 0.016872 ----
+
+Epoch 48  dev loss:  0.1049487696100886 
+dev ed f1:  0.6396761133603239  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.094201 -------
+--- Trigger Identification ---
+ P: 0.756126 R: 0.872140 F1: 0.810000
+--- Trigger Classification ---
+ P: 0.733956 R: 0.846568 F1: 0.786250
+---- seq loss : 0.072366 -----
+--- class loss : 0.024261 ----
+test an epoch: 4.814061880111694
+
+Epoch 48  test loss:  0.09420111974080404 
+test ed f1:  0.7862499999999999  test ae f1:  0
+Epoch 49
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.425735 -------
+--- Trigger Identification ---
+ P: 0.991350 R: 0.986952 F1: 0.989146
+--- Trigger Classification ---
+ P: 0.991088 R: 0.986691 F1: 0.988885
+---- seq loss : 0.001244 -----
+--- class loss : 0.028299 ----
+train an epoch: 351.5163311958313
+
+Epoch 49  training loss:  0.425734581446345  training ed f1:  0.9888845298809991  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.100568 -------
+--- Trigger Identification ---
+ P: 0.642336 R: 0.737430 F1: 0.686606
+--- Trigger Classification ---
+ P: 0.600973 R: 0.689944 F1: 0.642393
+---- seq loss : 0.085791 -----
+--- class loss : 0.016418 ----
+
+Epoch 49  dev loss:  0.10056779232735817 
+dev ed f1:  0.6423927178153447  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.098585 -------
+--- Trigger Identification ---
+ P: 0.721788 R: 0.869448 F1: 0.788767
+--- Trigger Classification ---
+ P: 0.699441 R: 0.842530 F1: 0.764347
+---- seq loss : 0.077271 -----
+--- class loss : 0.023682 ----
+test an epoch: 4.753546953201294
+
+Epoch 49  test loss:  0.09858459321161112 
+test ed f1:  0.7643467643467644  test ae f1:  0
+Epoch 50
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.416758 -------
+--- Trigger Identification ---
+ P: 0.985941 R: 0.988257 F1: 0.987098
+--- Trigger Classification ---
+ P: 0.985160 R: 0.987474 F1: 0.986316
+---- seq loss : 0.001388 -----
+--- class loss : 0.027691 ----
+train an epoch: 352.28169226646423
+
+Epoch 50  training loss:  0.4167584286998571  training ed f1:  0.9863156522872409  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.109138 -------
+--- Trigger Identification ---
+ P: 0.653061 R: 0.715084 F1: 0.682667
+--- Trigger Classification ---
+ P: 0.599490 R: 0.656425 F1: 0.626667
+---- seq loss : 0.094757 -----
+--- class loss : 0.015979 ----
+
+Epoch 50  dev loss:  0.10913793860863034 
+dev ed f1:  0.6266666666666666  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.099011 -------
+--- Trigger Identification ---
+ P: 0.732080 R: 0.838493 F1: 0.781681
+--- Trigger Classification ---
+ P: 0.712103 R: 0.815612 F1: 0.760351
+---- seq loss : 0.078210 -----
+--- class loss : 0.023112 ----
+test an epoch: 4.783042907714844
+
+Epoch 50  test loss:  0.09901140710959831 
+test ed f1:  0.7603513174404014  test ae f1:  0
+Epoch 51
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.407801 -------
+--- Trigger Identification ---
+ P: 0.990835 R: 0.987474 F1: 0.989152
+--- Trigger Classification ---
+ P: 0.990050 R: 0.986691 F1: 0.988368
+---- seq loss : 0.001355 -----
+--- class loss : 0.027096 ----
+train an epoch: 351.6660461425781
+
+Epoch 51  training loss:  0.40780140731224657  training ed f1:  0.9883675336557313  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.103542 -------
+--- Trigger Identification ---
+ P: 0.648193 R: 0.751397 F1: 0.695990
+--- Trigger Classification ---
+ P: 0.602410 R: 0.698324 F1: 0.646831
+---- seq loss : 0.089545 -----
+--- class loss : 0.015551 ----
+
+Epoch 51  dev loss:  0.1035417780244293 
+dev ed f1:  0.646830530401035  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.098819 -------
+--- Trigger Identification ---
+ P: 0.735092 R: 0.862719 F1: 0.793808
+--- Trigger Classification ---
+ P: 0.708716 R: 0.831763 F1: 0.765325
+---- seq loss : 0.078510 -----
+--- class loss : 0.022566 ----
+test an epoch: 4.924050569534302
+
+Epoch 51  test loss:  0.09881938497225444 
+test ed f1:  0.7653250773993809  test ae f1:  0
+Epoch 52
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.398925 -------
+--- Trigger Identification ---
+ P: 0.988251 R: 0.987735 F1: 0.987993
+--- Trigger Classification ---
+ P: 0.987467 R: 0.986952 F1: 0.987210
+---- seq loss : 0.001267 -----
+--- class loss : 0.026511 ----
+train an epoch: 351.5879292488098
+
+Epoch 52  training loss:  0.39892548996704336  training ed f1:  0.9872096058470372  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.100579 -------
+--- Trigger Identification ---
+ P: 0.691460 R: 0.701117 F1: 0.696255
+--- Trigger Classification ---
+ P: 0.641873 R: 0.650838 F1: 0.646325
+---- seq loss : 0.086956 -----
+--- class loss : 0.015136 ----
+
+Epoch 52  dev loss:  0.10057857889646235 
+dev ed f1:  0.6463245492371706  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.093499 -------
+--- Trigger Identification ---
+ P: 0.767554 R: 0.853297 F1: 0.808158
+--- Trigger Classification ---
+ P: 0.744552 R: 0.827725 F1: 0.783939
+---- seq loss : 0.073672 -----
+--- class loss : 0.022031 ----
+test an epoch: 4.93079400062561
+
+Epoch 52  test loss:  0.09349916744977235 
+test ed f1:  0.7839388145315488  test ae f1:  0
+Epoch 53
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.390458 -------
+--- Trigger Identification ---
+ P: 0.988494 R: 0.986430 F1: 0.987461
+--- Trigger Classification ---
+ P: 0.986663 R: 0.984603 F1: 0.985632
+---- seq loss : 0.001433 -----
+--- class loss : 0.025935 ----
+train an epoch: 351.4997720718384
+
+Epoch 53  training loss:  0.390457718002982  training ed f1:  0.9856321839080461  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.100514 -------
+--- Trigger Identification ---
+ P: 0.698925 R: 0.726257 F1: 0.712329
+--- Trigger Classification ---
+ P: 0.647849 R: 0.673184 F1: 0.660274
+---- seq loss : 0.087251 -----
+--- class loss : 0.014736 ----
+
+Epoch 53  dev loss:  0.1005138355987863 
+dev ed f1:  0.6602739726027398  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.089439 -------
+--- Trigger Identification ---
+ P: 0.766474 R: 0.892328 F1: 0.824627
+--- Trigger Classification ---
+ P: 0.736416 R: 0.857335 F1: 0.792289
+---- seq loss : 0.070076 -----
+--- class loss : 0.021514 ----
+test an epoch: 4.911077260971069
+
+Epoch 53  test loss:  0.08943902055422465 
+test ed f1:  0.7922885572139304  test ae f1:  0
+Save best model at Epoch 53 best_score:  0.7922885572139304
+Epoch 54
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.381861 -------
+--- Trigger Identification ---
+ P: 0.990842 R: 0.988257 F1: 0.989548
+--- Trigger Classification ---
+ P: 0.987441 R: 0.984864 F1: 0.986151
+---- seq loss : 0.001287 -----
+--- class loss : 0.025372 ----
+train an epoch: 351.42543268203735
+
+Epoch 54  training loss:  0.3818609241147425  training ed f1:  0.9861510321400575  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.093351 -------
+--- Trigger Identification ---
+ P: 0.707989 R: 0.717877 F1: 0.712899
+--- Trigger Classification ---
+ P: 0.658402 R: 0.667598 F1: 0.662968
+---- seq loss : 0.080443 -----
+--- class loss : 0.014342 ----
+
+Epoch 54  dev loss:  0.0933510675184572 
+dev ed f1:  0.6629680998613038  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.083899 -------
+--- Trigger Identification ---
+ P: 0.789343 R: 0.857335 F1: 0.821935
+--- Trigger Classification ---
+ P: 0.767038 R: 0.833109 F1: 0.798710
+---- seq loss : 0.064996 -----
+--- class loss : 0.021003 ----
+test an epoch: 4.748882055282593
+
+Epoch 54  test loss:  0.08389895471433799 
+test ed f1:  0.7987096774193547  test ae f1:  0
+Save best model at Epoch 54 best_score:  0.7987096774193547
+Epoch 55
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.373460 -------
+--- Trigger Identification ---
+ P: 0.989777 R: 0.985386 F1: 0.987577
+--- Trigger Classification ---
+ P: 0.988729 R: 0.984342 F1: 0.986531
+---- seq loss : 0.001213 -----
+--- class loss : 0.024817 ----
+train an epoch: 351.7715811729431
+
+Epoch 55  training loss:  0.37346028038927626  training ed f1:  0.9865306656205048  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.101941 -------
+--- Trigger Identification ---
+ P: 0.621315 R: 0.765363 F1: 0.685857
+--- Trigger Classification ---
+ P: 0.587302 R: 0.723464 F1: 0.648310
+---- seq loss : 0.089370 -----
+--- class loss : 0.013968 ----
+
+Epoch 55  dev loss:  0.10194124972734314 
+dev ed f1:  0.6483103879849813  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.095746 -------
+--- Trigger Identification ---
+ P: 0.731441 R: 0.901750 F1: 0.807715
+--- Trigger Classification ---
+ P: 0.710699 R: 0.876178 F1: 0.784810
+---- seq loss : 0.077285 -----
+--- class loss : 0.020512 ----
+test an epoch: 4.897921800613403
+
+Epoch 55  test loss:  0.09574570966263612 
+test ed f1:  0.7848101265822783  test ae f1:  0
+Epoch 56
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.365264 -------
+--- Trigger Identification ---
+ P: 0.991634 R: 0.989823 F1: 0.990727
+--- Trigger Classification ---
+ P: 0.990850 R: 0.989040 F1: 0.989944
+---- seq loss : 0.001166 -----
+--- class loss : 0.024273 ----
+train an epoch: 351.29656744003296
+
+Epoch 56  training loss:  0.3652643770407104  training ed f1:  0.9899438422358627  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.108261 -------
+--- Trigger Identification ---
+ P: 0.630332 R: 0.743017 F1: 0.682051
+--- Trigger Classification ---
+ P: 0.585308 R: 0.689944 F1: 0.633333
+---- seq loss : 0.096026 -----
+--- class loss : 0.013594 ----
+
+Epoch 56  dev loss:  0.10826149636593002 
+dev ed f1:  0.6333333333333333  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.104613 -------
+--- Trigger Identification ---
+ P: 0.710270 R: 0.884253 F1: 0.787770
+--- Trigger Classification ---
+ P: 0.687568 R: 0.855989 F1: 0.762590
+---- seq loss : 0.086581 -----
+--- class loss : 0.020036 ----
+test an epoch: 4.771584749221802
+
+Epoch 56  test loss:  0.10461312346160412 
+test ed f1:  0.7625899280575539  test ae f1:  0
+Epoch 57
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.357080 -------
+--- Trigger Identification ---
+ P: 0.991116 R: 0.989823 F1: 0.990469
+--- Trigger Classification ---
+ P: 0.990071 R: 0.988779 F1: 0.989424
+---- seq loss : 0.000939 -----
+--- class loss : 0.023743 ----
+train an epoch: 351.69510102272034
+
+Epoch 57  training loss:  0.35707969342463264  training ed f1:  0.9894242068155111  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.107673 -------
+--- Trigger Identification ---
+ P: 0.643038 R: 0.709497 F1: 0.674635
+--- Trigger Classification ---
+ P: 0.612658 R: 0.675978 F1: 0.642762
+---- seq loss : 0.095755 -----
+--- class loss : 0.013242 ----
+
+Epoch 57  dev loss:  0.10767314203370076 
+dev ed f1:  0.6427622841965472  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.093109 -------
+--- Trigger Identification ---
+ P: 0.761792 R: 0.869448 F1: 0.812068
+--- Trigger Classification ---
+ P: 0.740566 R: 0.845222 F1: 0.789441
+---- seq loss : 0.075492 -----
+--- class loss : 0.019574 ----
+test an epoch: 4.755090951919556
+
+Epoch 57  test loss:  0.0931086686750253 
+test ed f1:  0.7894406033940918  test ae f1:  0
+Epoch 58
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.349363 -------
+--- Trigger Identification ---
+ P: 0.991364 R: 0.988518 F1: 0.989939
+--- Trigger Classification ---
+ P: 0.990840 R: 0.987996 F1: 0.989416
+---- seq loss : 0.001083 -----
+--- class loss : 0.023219 ----
+train an epoch: 351.25799655914307
+
+Epoch 58  training loss:  0.34936294021500197  training ed f1:  0.9894159153273226  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.104834 -------
+--- Trigger Identification ---
+ P: 0.714286 R: 0.698324 F1: 0.706215
+--- Trigger Classification ---
+ P: 0.671429 R: 0.656425 F1: 0.663842
+---- seq loss : 0.093225 -----
+--- class loss : 0.012898 ----
+
+Epoch 58  dev loss:  0.10483374550508764 
+dev ed f1:  0.6638418079096045  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.097128 -------
+--- Trigger Identification ---
+ P: 0.780124 R: 0.845222 F1: 0.811370
+--- Trigger Classification ---
+ P: 0.761491 R: 0.825034 F1: 0.791990
+---- seq loss : 0.079916 -----
+--- class loss : 0.019124 ----
+test an epoch: 4.934896469116211
+
+Epoch 58  test loss:  0.0971277467906475 
+test ed f1:  0.7919896640826872  test ae f1:  0
+Epoch 59
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.341949 -------
+--- Trigger Identification ---
+ P: 0.988509 R: 0.987735 F1: 0.988122
+--- Trigger Classification ---
+ P: 0.987464 R: 0.986691 F1: 0.987077
+---- seq loss : 0.001358 -----
+--- class loss : 0.022706 ----
+train an epoch: 351.7723813056946
+
+Epoch 59  training loss:  0.3419493743687227  training ed f1:  0.9870774050385067  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.102883 -------
+--- Trigger Identification ---
+ P: 0.694370 R: 0.723464 F1: 0.708618
+--- Trigger Classification ---
+ P: 0.656836 R: 0.684358 F1: 0.670315
+---- seq loss : 0.091571 -----
+--- class loss : 0.012568 ----
+
+Epoch 59  dev loss:  0.10288285809712341 
+dev ed f1:  0.6703146374829001  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.092359 -------
+--- Trigger Identification ---
+ P: 0.767943 R: 0.864065 F1: 0.813173
+--- Trigger Classification ---
+ P: 0.752392 R: 0.846568 F1: 0.796707
+---- seq loss : 0.075539 -----
+--- class loss : 0.018689 ----
+test an epoch: 5.20730996131897
+
+Epoch 59  test loss:  0.09235925823450089 
+test ed f1:  0.7967067764407852  test ae f1:  0
+Save CPU model at Epoch 59 score:  0.6703146374829001
+Now testset score:  0.7967067764407852
+Epoch 60
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.334569 -------
+--- Trigger Identification ---
+ P: 0.988494 R: 0.986430 F1: 0.987461
+--- Trigger Classification ---
+ P: 0.987448 R: 0.985386 F1: 0.986416
+---- seq loss : 0.001525 -----
+--- class loss : 0.022203 ----
+train an epoch: 351.2021646499634
+
+Epoch 60  training loss:  0.3345693751077926  training ed f1:  0.9864158829676071  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.104169 -------
+--- Trigger Identification ---
+ P: 0.636364 R: 0.703911 F1: 0.668435
+--- Trigger Classification ---
+ P: 0.603535 R: 0.667598 F1: 0.633952
+---- seq loss : 0.093149 -----
+--- class loss : 0.012245 ----
+
+Epoch 60  dev loss:  0.10416938587038133 
+dev ed f1:  0.6339522546419097  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.093909 -------
+--- Trigger Identification ---
+ P: 0.761457 R: 0.872140 F1: 0.813049
+--- Trigger Classification ---
+ P: 0.742656 R: 0.850606 F1: 0.792974
+---- seq loss : 0.077469 -----
+--- class loss : 0.018267 ----
+test an epoch: 4.753194332122803
+
+Epoch 60  test loss:  0.09390939759711424 
+test ed f1:  0.7929736511919699  test ae f1:  0
+Epoch 61
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.326682 -------
+--- Trigger Identification ---
+ P: 0.991127 R: 0.991127 F1: 0.991127
+--- Trigger Classification ---
+ P: 0.990605 R: 0.990605 F1: 0.990605
+---- seq loss : 0.001046 -----
+--- class loss : 0.021709 ----
+train an epoch: 351.2936770915985
+
+Epoch 61  training loss:  0.32668196478299383  training ed f1:  0.9906054279749478  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.100790 -------
+--- Trigger Identification ---
+ P: 0.688889 R: 0.692737 F1: 0.690808
+--- Trigger Classification ---
+ P: 0.636111 R: 0.639665 F1: 0.637883
+---- seq loss : 0.090052 -----
+--- class loss : 0.011931 ----
+
+Epoch 61  dev loss:  0.10079008577248225 
+dev ed f1:  0.637883008356546  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.088909 -------
+--- Trigger Identification ---
+ P: 0.766990 R: 0.850606 F1: 0.806637
+--- Trigger Classification ---
+ P: 0.743932 R: 0.825034 F1: 0.782387
+---- seq loss : 0.072837 -----
+--- class loss : 0.017858 ----
+test an epoch: 5.082788467407227
+
+Epoch 61  test loss:  0.08890889585018158 
+test ed f1:  0.782386726228462  test ae f1:  0
+Epoch 62
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.319573 -------
+--- Trigger Identification ---
+ P: 0.989028 R: 0.987996 F1: 0.988512
+--- Trigger Classification ---
+ P: 0.986938 R: 0.985908 F1: 0.986423
+---- seq loss : 0.001221 -----
+--- class loss : 0.021223 ----
+train an epoch: 351.4858684539795
+
+Epoch 62  training loss:  0.3195731000898706  training ed f1:  0.9864229765013055  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.104548 -------
+--- Trigger Identification ---
+ P: 0.662500 R: 0.740223 F1: 0.699208
+--- Trigger Classification ---
+ P: 0.620000 R: 0.692737 F1: 0.654354
+---- seq loss : 0.094086 -----
+--- class loss : 0.011625 ----
+
+Epoch 62  dev loss:  0.10454781690182594 
+dev ed f1:  0.6543535620052771  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.092900 -------
+--- Trigger Identification ---
+ P: 0.756184 R: 0.864065 F1: 0.806533
+--- Trigger Classification ---
+ P: 0.737338 R: 0.842530 F1: 0.786432
+---- seq loss : 0.077187 -----
+--- class loss : 0.017459 ----
+test an epoch: 5.1372599601745605
+
+Epoch 62  test loss:  0.09289959104110797 
+test ed f1:  0.7864321608040201  test ae f1:  0
+Epoch 63
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.312282 -------
+--- Trigger Identification ---
+ P: 0.991123 R: 0.990605 F1: 0.990864
+--- Trigger Classification ---
+ P: 0.990601 R: 0.990084 F1: 0.990342
+---- seq loss : 0.001041 -----
+--- class loss : 0.020749 ----
+train an epoch: 351.80079317092896
+
+Epoch 63  training loss:  0.31228162236737855  training ed f1:  0.9903419472722528  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.091569 -------
+--- Trigger Identification ---
+ P: 0.726761 R: 0.720670 F1: 0.723703
+--- Trigger Classification ---
+ P: 0.684507 R: 0.678771 F1: 0.681627
+---- seq loss : 0.081378 -----
+--- class loss : 0.011324 ----
+
+Epoch 63  dev loss:  0.09156914841598617 
+dev ed f1:  0.6816269284712483  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.082152 -------
+--- Trigger Identification ---
+ P: 0.804320 R: 0.851952 F1: 0.827451
+--- Trigger Classification ---
+ P: 0.782719 R: 0.829071 F1: 0.805229
+---- seq loss : 0.066786 -----
+--- class loss : 0.017074 ----
+test an epoch: 4.927214622497559
+
+Epoch 63  test loss:  0.08215174848834673 
+test ed f1:  0.8052287581699347  test ae f1:  0
+Save CPU model at Epoch 63 score:  0.6816269284712483
+Now testset score:  0.8052287581699347
+Save best model at Epoch 63 best_score:  0.8052287581699347
+Epoch 64
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.305141 -------
+--- Trigger Identification ---
+ P: 0.992941 R: 0.991127 F1: 0.992033
+--- Trigger Classification ---
+ P: 0.991634 R: 0.989823 F1: 0.990727
+---- seq loss : 0.000868 -----
+--- class loss : 0.020285 ----
+train an epoch: 351.65882754325867
+
+Epoch 64  training loss:  0.30514072323481145  training ed f1:  0.9907274389447563  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.093423 -------
+--- Trigger Identification ---
+ P: 0.678571 R: 0.743017 F1: 0.709333
+--- Trigger Classification ---
+ P: 0.627551 R: 0.687151 F1: 0.656000
+---- seq loss : 0.083485 -----
+--- class loss : 0.011042 ----
+
+Epoch 64  dev loss:  0.09342261815730196 
+dev ed f1:  0.656  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.088916 -------
+--- Trigger Identification ---
+ P: 0.756098 R: 0.876178 F1: 0.811721
+--- Trigger Classification ---
+ P: 0.730546 R: 0.846568 F1: 0.784289
+---- seq loss : 0.073882 -----
+--- class loss : 0.016704 ----
+test an epoch: 4.789254188537598
+
+Epoch 64  test loss:  0.08891597700615723 
+test ed f1:  0.7842892768079801  test ae f1:  0
+Epoch 65
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.298311 -------
+--- Trigger Identification ---
+ P: 0.991645 R: 0.991127 F1: 0.991386
+--- Trigger Classification ---
+ P: 0.990862 R: 0.990344 F1: 0.990603
+---- seq loss : 0.000903 -----
+--- class loss : 0.019827 ----
+train an epoch: 351.29350090026855
+
+Epoch 65  training loss:  0.2983114645316802  training ed f1:  0.990602975724354  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.103565 -------
+--- Trigger Identification ---
+ P: 0.674185 R: 0.751397 F1: 0.710700
+--- Trigger Classification ---
+ P: 0.624060 R: 0.695531 F1: 0.657860
+---- seq loss : 0.093875 -----
+--- class loss : 0.010766 ----
+
+Epoch 65  dev loss:  0.10356452675590005 
+dev ed f1:  0.6578599735799208  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.091409 -------
+--- Trigger Identification ---
+ P: 0.778049 R: 0.858681 F1: 0.816379
+--- Trigger Classification ---
+ P: 0.753659 R: 0.831763 F1: 0.790787
+---- seq loss : 0.076699 -----
+--- class loss : 0.016345 ----
+test an epoch: 4.781472682952881
+
+Epoch 65  test loss:  0.0914090821519494 
+test ed f1:  0.7907869481765836  test ae f1:  0
+Epoch 66
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.291682 -------
+--- Trigger Identification ---
+ P: 0.991130 R: 0.991388 F1: 0.991259
+--- Trigger Classification ---
+ P: 0.990608 R: 0.990866 F1: 0.990737
+---- seq loss : 0.001004 -----
+--- class loss : 0.019378 ----
+train an epoch: 352.28322744369507
+
+Epoch 66  training loss:  0.2916817964624128  training ed f1:  0.990737116764514  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.099842 -------
+--- Trigger Identification ---
+ P: 0.671642 R: 0.754190 F1: 0.710526
+--- Trigger Classification ---
+ P: 0.626866 R: 0.703911 F1: 0.663158
+---- seq loss : 0.090394 -----
+--- class loss : 0.010498 ----
+
+Epoch 66  dev loss:  0.09984176422361858 
+dev ed f1:  0.6631578947368421  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.093132 -------
+--- Trigger Identification ---
+ P: 0.748276 R: 0.876178 F1: 0.807192
+--- Trigger Classification ---
+ P: 0.724138 R: 0.847914 F1: 0.781153
+---- seq loss : 0.078736 -----
+--- class loss : 0.015996 ----
+test an epoch: 4.858625411987305
+
+Epoch 66  test loss:  0.09313191349307696 
+test ed f1:  0.7811531308121512  test ae f1:  0
+Epoch 67
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.285516 -------
+--- Trigger Identification ---
+ P: 0.989045 R: 0.989562 F1: 0.989303
+--- Trigger Classification ---
+ P: 0.988002 R: 0.988518 F1: 0.988260
+---- seq loss : 0.001438 -----
+--- class loss : 0.018939 ----
+train an epoch: 352.02872347831726
+
+Epoch 67  training loss:  0.285515923302818  training ed f1:  0.9882598486824942  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.091519 -------
+--- Trigger Identification ---
+ P: 0.648910 R: 0.748603 F1: 0.695201
+--- Trigger Classification ---
+ P: 0.605327 R: 0.698324 F1: 0.648508
+---- seq loss : 0.082305 -----
+--- class loss : 0.010238 ----
+
+Epoch 67  dev loss:  0.0915190098950496 
+dev ed f1:  0.6485084306095978  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.084070 -------
+--- Trigger Identification ---
+ P: 0.764637 R: 0.878869 F1: 0.817783
+--- Trigger Classification ---
+ P: 0.745902 R: 0.857335 F1: 0.797746
+---- seq loss : 0.069979 -----
+--- class loss : 0.015656 ----
+test an epoch: 4.89568018913269
+
+Epoch 67  test loss:  0.08407007548958063 
+test ed f1:  0.7977457733249844  test ae f1:  0
+Epoch 68
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.278875 -------
+--- Trigger Identification ---
+ P: 0.990576 R: 0.987474 F1: 0.989022
+--- Trigger Classification ---
+ P: 0.989529 R: 0.986430 F1: 0.987977
+---- seq loss : 0.001280 -----
+--- class loss : 0.018506 ----
+train an epoch: 352.0356135368347
+
+Epoch 68  training loss:  0.2788752077916271  training ed f1:  0.9879769994772608  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.102407 -------
+--- Trigger Identification ---
+ P: 0.697802 R: 0.709497 F1: 0.703601
+--- Trigger Classification ---
+ P: 0.653846 R: 0.664804 F1: 0.659280
+---- seq loss : 0.093422 -----
+--- class loss : 0.009983 ----
+
+Epoch 68  dev loss:  0.102406910334069 
+dev ed f1:  0.6592797783933517  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.093294 -------
+--- Trigger Identification ---
+ P: 0.782288 R: 0.855989 F1: 0.817481
+--- Trigger Classification ---
+ P: 0.757688 R: 0.829071 F1: 0.791774
+---- seq loss : 0.079501 -----
+--- class loss : 0.015325 ----
+test an epoch: 4.786282062530518
+
+Epoch 68  test loss:  0.09329377536972364 
+test ed f1:  0.7917737789203083  test ae f1:  0
+Epoch 69
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.272193 -------
+--- Trigger Identification ---
+ P: 0.992151 R: 0.989562 F1: 0.990854
+--- Trigger Classification ---
+ P: 0.991104 R: 0.988518 F1: 0.989809
+---- seq loss : 0.000952 -----
+--- class loss : 0.018083 ----
+train an epoch: 352.0321207046509
+
+Epoch 69  training loss:  0.2721927089027641  training ed f1:  0.9898092500653253  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.107450 -------
+--- Trigger Identification ---
+ P: 0.690476 R: 0.729050 F1: 0.709239
+--- Trigger Classification ---
+ P: 0.645503 R: 0.681564 F1: 0.663043
+---- seq loss : 0.098686 -----
+--- class loss : 0.009737 ----
+
+Epoch 69  dev loss:  0.10744979803880247 
+dev ed f1:  0.6630434782608695  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.092427 -------
+--- Trigger Identification ---
+ P: 0.792804 R: 0.860027 F1: 0.825048
+--- Trigger Classification ---
+ P: 0.774194 R: 0.839838 F1: 0.805681
+---- seq loss : 0.078922 -----
+--- class loss : 0.015005 ----
+test an epoch: 4.805763006210327
+
+Epoch 69  test loss:  0.09242653014759222 
+test ed f1:  0.8056810845706907  test ae f1:  0
+Save best model at Epoch 69 best_score:  0.8056810845706907
+Epoch 70
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.265839 -------
+--- Trigger Identification ---
+ P: 0.992947 R: 0.991910 F1: 0.992428
+--- Trigger Classification ---
+ P: 0.992163 R: 0.991127 F1: 0.991645
+---- seq loss : 0.000816 -----
+--- class loss : 0.017668 ----
+train an epoch: 351.84540486335754
+
+Epoch 70  training loss:  0.26583853883259656  training ed f1:  0.9916449086161879  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.103587 -------
+--- Trigger Identification ---
+ P: 0.693506 R: 0.745810 F1: 0.718708
+--- Trigger Classification ---
+ P: 0.638961 R: 0.687151 F1: 0.662180
+---- seq loss : 0.095034 -----
+--- class loss : 0.009504 ----
+
+Epoch 70  dev loss:  0.10358745106854118 
+dev ed f1:  0.6621803499327052  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.094217 -------
+--- Trigger Identification ---
+ P: 0.758782 R: 0.872140 F1: 0.811522
+--- Trigger Classification ---
+ P: 0.740047 R: 0.850606 F1: 0.791484
+---- seq loss : 0.080991 -----
+--- class loss : 0.014696 ----
+test an epoch: 4.799495220184326
+
+Epoch 70  test loss:  0.09421744781235854 
+test ed f1:  0.791484032561052  test ae f1:  0
+Epoch 71
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.259828 -------
+--- Trigger Identification ---
+ P: 0.991636 R: 0.990084 F1: 0.990859
+--- Trigger Classification ---
+ P: 0.990591 R: 0.989040 F1: 0.989815
+---- seq loss : 0.000910 -----
+--- class loss : 0.017261 ----
+train an epoch: 351.447256565094
+
+Epoch 71  training loss:  0.2598281975030677  training ed f1:  0.9898145729955602  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.099682 -------
+--- Trigger Identification ---
+ P: 0.681122 R: 0.745810 F1: 0.712000
+--- Trigger Classification ---
+ P: 0.637755 R: 0.698324 F1: 0.666667
+---- seq loss : 0.091339 -----
+--- class loss : 0.009271 ----
+
+Epoch 71  dev loss:  0.09968237281562044 
+dev ed f1:  0.6666666666666666  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.096103 -------
+--- Trigger Identification ---
+ P: 0.736064 R: 0.870794 F1: 0.797781
+--- Trigger Classification ---
+ P: 0.715586 R: 0.846568 F1: 0.775586
+---- seq loss : 0.083150 -----
+--- class loss : 0.014391 ----
+test an epoch: 4.746119976043701
+
+Epoch 71  test loss:  0.09610265232622624 
+test ed f1:  0.7755856966707768  test ae f1:  0
+Epoch 72
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.254241 -------
+--- Trigger Identification ---
+ P: 0.987725 R: 0.986952 F1: 0.987338
+--- Trigger Classification ---
+ P: 0.987725 R: 0.986952 F1: 0.987338
+---- seq loss : 0.001319 -----
+--- class loss : 0.016861 ----
+train an epoch: 351.3903810977936
+
+Epoch 72  training loss:  0.25424115335986136  training ed f1:  0.9873384675629814  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.088300 -------
+--- Trigger Identification ---
+ P: 0.696570 R: 0.737430 F1: 0.716418
+--- Trigger Classification ---
+ P: 0.643799 R: 0.681564 F1: 0.662144
+---- seq loss : 0.080163 -----
+--- class loss : 0.009041 ----
+
+Epoch 72  dev loss:  0.088299667982098 
+dev ed f1:  0.6621438263229308  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.080665 -------
+--- Trigger Identification ---
+ P: 0.786164 R: 0.841184 F1: 0.812744
+--- Trigger Classification ---
+ P: 0.762264 R: 0.815612 F1: 0.788036
+---- seq loss : 0.067982 -----
+--- class loss : 0.014092 ----
+test an epoch: 4.991595983505249
+
+Epoch 72  test loss:  0.08066545967012644 
+test ed f1:  0.7880364109232771  test ae f1:  0
+Epoch 73
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.247938 -------
+--- Trigger Identification ---
+ P: 0.991382 R: 0.990605 F1: 0.990993
+--- Trigger Classification ---
+ P: 0.991120 R: 0.990344 F1: 0.990732
+---- seq loss : 0.000893 -----
+--- class loss : 0.016470 ----
+train an epoch: 351.42049169540405
+
+Epoch 73  training loss:  0.2479383508355108  training ed f1:  0.9907322803811512  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.100796 -------
+--- Trigger Identification ---
+ P: 0.690289 R: 0.734637 F1: 0.711773
+--- Trigger Classification ---
+ P: 0.648294 R: 0.689944 F1: 0.668471
+---- seq loss : 0.092855 -----
+--- class loss : 0.008823 ----
+
+Epoch 73  dev loss:  0.10079586839016813 
+dev ed f1:  0.668470906630582  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.087866 -------
+--- Trigger Identification ---
+ P: 0.758333 R: 0.857335 F1: 0.804801
+--- Trigger Classification ---
+ P: 0.734524 R: 0.830417 F1: 0.779533
+---- seq loss : 0.075442 -----
+--- class loss : 0.013805 ----
+test an epoch: 4.833641767501831
+
+Epoch 73  test loss:  0.08786639124155045 
+test ed f1:  0.7795325331648768  test ae f1:  0
+Epoch 74
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.242152 -------
+--- Trigger Identification ---
+ P: 0.992943 R: 0.991388 F1: 0.992165
+--- Trigger Classification ---
+ P: 0.992159 R: 0.990605 F1: 0.991382
+---- seq loss : 0.000882 -----
+--- class loss : 0.016085 ----
+train an epoch: 351.95564556121826
+
+Epoch 74  training loss:  0.24215199271521262  training ed f1:  0.991381561765474  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.094983 -------
+--- Trigger Identification ---
+ P: 0.705094 R: 0.734637 F1: 0.719562
+--- Trigger Classification ---
+ P: 0.667560 R: 0.695531 F1: 0.681259
+---- seq loss : 0.087232 -----
+--- class loss : 0.008612 ----
+
+Epoch 74  dev loss:  0.09498275014965867 
+dev ed f1:  0.6812585499316005  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.093252 -------
+--- Trigger Identification ---
+ P: 0.773723 R: 0.855989 F1: 0.812780
+--- Trigger Classification ---
+ P: 0.753041 R: 0.833109 F1: 0.791054
+---- seq loss : 0.081075 -----
+--- class loss : 0.013530 ----
+test an epoch: 4.758180141448975
+
+Epoch 74  test loss:  0.09325226315607628 
+test ed f1:  0.7910543130990415  test ae f1:  0
+Epoch 75
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.236884 -------
+--- Trigger Identification ---
+ P: 0.989020 R: 0.987213 F1: 0.988115
+--- Trigger Classification ---
+ P: 0.988497 R: 0.986691 F1: 0.987593
+---- seq loss : 0.001246 -----
+--- class loss : 0.015709 ----
+train an epoch: 351.29284715652466
+
+Epoch 75  training loss:  0.23688431195483006  training ed f1:  0.9875930521091811  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.089896 -------
+--- Trigger Identification ---
+ P: 0.673367 R: 0.748603 F1: 0.708995
+--- Trigger Classification ---
+ P: 0.623116 R: 0.692737 F1: 0.656085
+---- seq loss : 0.082330 -----
+--- class loss : 0.008406 ----
+
+Epoch 75  dev loss:  0.08989569707773626 
+dev ed f1:  0.6560846560846562  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.080951 -------
+--- Trigger Identification ---
+ P: 0.776442 R: 0.869448 F1: 0.820317
+--- Trigger Classification ---
+ P: 0.753606 R: 0.843876 F1: 0.796190
+---- seq loss : 0.069021 -----
+--- class loss : 0.013256 ----
+test an epoch: 4.881514310836792
+
+Epoch 75  test loss:  0.08095109350979328 
+test ed f1:  0.7961904761904762  test ae f1:  0
+Epoch 76
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.230994 -------
+--- Trigger Identification ---
+ P: 0.993210 R: 0.992432 F1: 0.992821
+--- Trigger Classification ---
+ P: 0.992949 R: 0.992171 F1: 0.992560
+---- seq loss : 0.000897 -----
+--- class loss : 0.015340 ----
+train an epoch: 350.94401812553406
+
+Epoch 76  training loss:  0.2309939702268624  training ed f1:  0.9925597180524736  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.096335 -------
+--- Trigger Identification ---
+ P: 0.689922 R: 0.745810 F1: 0.716779
+--- Trigger Classification ---
+ P: 0.640827 R: 0.692737 F1: 0.665772
+---- seq loss : 0.088951 -----
+--- class loss : 0.008205 ----
+
+Epoch 76  dev loss:  0.09633537224279 
+dev ed f1:  0.6657718120805369  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.086587 -------
+--- Trigger Identification ---
+ P: 0.780518 R: 0.851952 F1: 0.814672
+--- Trigger Classification ---
+ P: 0.760789 R: 0.830417 F1: 0.794080
+---- seq loss : 0.074898 -----
+--- class loss : 0.012988 ----
+test an epoch: 5.042455196380615
+
+Epoch 76  test loss:  0.08658682436992725 
+test ed f1:  0.7940797940797941  test ae f1:  0
+Epoch 77
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.225620 -------
+--- Trigger Identification ---
+ P: 0.990357 R: 0.991649 F1: 0.991003
+--- Trigger Classification ---
+ P: 0.988793 R: 0.990084 F1: 0.989438
+---- seq loss : 0.000957 -----
+--- class loss : 0.014977 ----
+train an epoch: 351.3484480381012
+
+Epoch 77  training loss:  0.22561987460833496  training ed f1:  0.9894379971313078  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.104936 -------
+--- Trigger Identification ---
+ P: 0.694595 R: 0.717877 F1: 0.706044
+--- Trigger Classification ---
+ P: 0.643243 R: 0.664804 F1: 0.653846
+---- seq loss : 0.097725 -----
+--- class loss : 0.008012 ----
+
+Epoch 77  dev loss:  0.10493566447761483 
+dev ed f1:  0.6538461538461539  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.089759 -------
+--- Trigger Identification ---
+ P: 0.786156 R: 0.855989 F1: 0.819588
+--- Trigger Classification ---
+ P: 0.762670 R: 0.830417 F1: 0.795103
+---- seq loss : 0.078305 -----
+--- class loss : 0.012727 ----
+test an epoch: 4.745601415634155
+
+Epoch 77  test loss:  0.089758993498981 
+test ed f1:  0.7951030927835051  test ae f1:  0
+Epoch 78
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.220267 -------
+--- Trigger Identification ---
+ P: 0.991893 R: 0.989823 F1: 0.990857
+--- Trigger Classification ---
+ P: 0.990586 R: 0.988518 F1: 0.989551
+---- seq loss : 0.000930 -----
+--- class loss : 0.014622 ----
+train an epoch: 350.78807640075684
+
+Epoch 78  training loss:  0.2202670022955259  training ed f1:  0.9895506792058516  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.102244 -------
+--- Trigger Identification ---
+ P: 0.664987 R: 0.737430 F1: 0.699338
+--- Trigger Classification ---
+ P: 0.617128 R: 0.684358 F1: 0.649007
+---- seq loss : 0.095203 -----
+--- class loss : 0.007823 ----
+
+Epoch 78  dev loss:  0.1022439614798014 
+dev ed f1:  0.6490066225165563  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.086357 -------
+--- Trigger Identification ---
+ P: 0.772455 R: 0.868102 F1: 0.817490
+--- Trigger Classification ---
+ P: 0.749701 R: 0.842530 F1: 0.793409
+---- seq loss : 0.075133 -----
+--- class loss : 0.012471 ----
+test an epoch: 4.843559503555298
+
+Epoch 78  test loss:  0.0863566771770517 
+test ed f1:  0.7934093789607098  test ae f1:  0
+Epoch 79
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.214937 -------
+--- Trigger Identification ---
+ P: 0.991654 R: 0.992171 F1: 0.991912
+--- Trigger Classification ---
+ P: 0.991393 R: 0.991910 F1: 0.991651
+---- seq loss : 0.000815 -----
+--- class loss : 0.014275 ----
+train an epoch: 350.92476773262024
+
+Epoch 79  training loss:  0.21493692473954548  training ed f1:  0.9916514479519958  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.106402 -------
+--- Trigger Identification ---
+ P: 0.717143 R: 0.701117 F1: 0.709040
+--- Trigger Classification ---
+ P: 0.677143 R: 0.662011 F1: 0.669492
+---- seq loss : 0.099526 -----
+--- class loss : 0.007640 ----
+
+Epoch 79  dev loss:  0.10640204559044483 
+dev ed f1:  0.6694915254237288  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.084969 -------
+--- Trigger Identification ---
+ P: 0.803594 R: 0.842530 F1: 0.822602
+--- Trigger Classification ---
+ P: 0.785623 R: 0.823688 F1: 0.804205
+---- seq loss : 0.073971 -----
+--- class loss : 0.012221 ----
+test an epoch: 4.782450199127197
+
+Epoch 79  test loss:  0.0849692548935612 
+test ed f1:  0.8042049934296976  test ae f1:  0
+Epoch 80
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.210106 -------
+--- Trigger Identification ---
+ P: 0.990596 R: 0.989562 F1: 0.990078
+--- Trigger Classification ---
+ P: 0.989028 R: 0.987996 F1: 0.988512
+---- seq loss : 0.001095 -----
+--- class loss : 0.013934 ----
+train an epoch: 350.85689306259155
+
+Epoch 80  training loss:  0.21010608030647598  training ed f1:  0.9885117493472585  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.104456 -------
+--- Trigger Identification ---
+ P: 0.656716 R: 0.737430 F1: 0.694737
+--- Trigger Classification ---
+ P: 0.611940 R: 0.687151 F1: 0.647368
+---- seq loss : 0.097737 -----
+--- class loss : 0.007465 ----
+
+Epoch 80  dev loss:  0.1044555082379912 
+dev ed f1:  0.6473684210526316  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.093294 -------
+--- Trigger Identification ---
+ P: 0.751716 R: 0.884253 F1: 0.812616
+--- Trigger Classification ---
+ P: 0.726545 R: 0.854643 F1: 0.785405
+---- seq loss : 0.082517 -----
+--- class loss : 0.011974 ----
+test an epoch: 4.842577695846558
+
+Epoch 80  test loss:  0.0932939451187849 
+test ed f1:  0.7854050711193569  test ae f1:  0
+Epoch 81
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.204956 -------
+--- Trigger Identification ---
+ P: 0.991876 R: 0.987735 F1: 0.989801
+--- Trigger Classification ---
+ P: 0.990828 R: 0.986691 F1: 0.988755
+---- seq loss : 0.000932 -----
+--- class loss : 0.013602 ----
+train an epoch: 350.6457962989807
+
+Epoch 81  training loss:  0.20495617772230496  training ed f1:  0.9887552301255231  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.091564 -------
+--- Trigger Identification ---
+ P: 0.698667 R: 0.731844 F1: 0.714870
+--- Trigger Classification ---
+ P: 0.648000 R: 0.678771 F1: 0.663029
+---- seq loss : 0.085003 -----
+--- class loss : 0.007289 ----
+
+Epoch 81  dev loss:  0.09156392051730879 
+dev ed f1:  0.6630286493860846  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.085363 -------
+--- Trigger Identification ---
+ P: 0.768220 R: 0.865410 F1: 0.813924
+--- Trigger Classification ---
+ P: 0.743130 R: 0.837147 F1: 0.787342
+---- seq loss : 0.074799 -----
+--- class loss : 0.011738 ----
+test an epoch: 4.745392322540283
+
+Epoch 81  test loss:  0.08536330871284008 
+test ed f1:  0.7873417721518987  test ae f1:  0
+Epoch 82
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.199903 -------
+--- Trigger Identification ---
+ P: 0.994510 R: 0.992693 F1: 0.993601
+--- Trigger Classification ---
+ P: 0.992941 R: 0.991127 F1: 0.992033
+---- seq loss : 0.000774 -----
+--- class loss : 0.013275 ----
+train an epoch: 350.9192810058594
+
+Epoch 82  training loss:  0.19990295805211772  training ed f1:  0.9920334334595793  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.104181 -------
+--- Trigger Identification ---
+ P: 0.700265 R: 0.737430 F1: 0.718367
+--- Trigger Classification ---
+ P: 0.652520 R: 0.687151 F1: 0.669388
+---- seq loss : 0.097772 -----
+--- class loss : 0.007121 ----
+
+Epoch 82  dev loss:  0.10418096824119297 
+dev ed f1:  0.669387755102041  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.097399 -------
+--- Trigger Identification ---
+ P: 0.757143 R: 0.855989 F1: 0.803538
+--- Trigger Classification ---
+ P: 0.728571 R: 0.823688 F1: 0.773215
+---- seq loss : 0.087045 -----
+--- class loss : 0.011504 ----
+test an epoch: 5.093747138977051
+
+Epoch 82  test loss:  0.09739879394570987 
+test ed f1:  0.7732154137713202  test ae f1:  0
+Epoch 83
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.195067 -------
+--- Trigger Identification ---
+ P: 0.992952 R: 0.992693 F1: 0.992823
+--- Trigger Classification ---
+ P: 0.991908 R: 0.991649 F1: 0.991779
+---- seq loss : 0.000744 -----
+--- class loss : 0.012955 ----
+train an epoch: 350.9794340133667
+
+Epoch 83  training loss:  0.19506734657763333  training ed f1:  0.9917786767584498  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.105684 -------
+--- Trigger Identification ---
+ P: 0.650000 R: 0.726257 F1: 0.686016
+--- Trigger Classification ---
+ P: 0.600000 R: 0.670391 F1: 0.633245
+---- seq loss : 0.099422 -----
+--- class loss : 0.006957 ----
+
+Epoch 83  dev loss:  0.1056835719366343 
+dev ed f1:  0.633245382585752  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.089408 -------
+--- Trigger Identification ---
+ P: 0.761511 R: 0.868102 F1: 0.811321
+--- Trigger Classification ---
+ P: 0.733176 R: 0.835801 F1: 0.781132
+---- seq loss : 0.079260 -----
+--- class loss : 0.011276 ----
+test an epoch: 4.828228712081909
+
+Epoch 83  test loss:  0.08940812939157089 
+test ed f1:  0.7811320754716983  test ae f1:  0
+Epoch 84
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.190466 -------
+--- Trigger Identification ---
+ P: 0.991656 R: 0.992432 F1: 0.992044
+--- Trigger Classification ---
+ P: 0.990613 R: 0.991388 F1: 0.991000
+---- seq loss : 0.000847 -----
+--- class loss : 0.012641 ----
+train an epoch: 350.82070112228394
+
+Epoch 84  training loss:  0.1904655106891991  training ed f1:  0.9910003912873353  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.095996 -------
+--- Trigger Identification ---
+ P: 0.708556 R: 0.740223 F1: 0.724044
+--- Trigger Classification ---
+ P: 0.657754 R: 0.687151 F1: 0.672131
+---- seq loss : 0.089876 -----
+--- class loss : 0.006800 ----
+
+Epoch 84  dev loss:  0.09599580227110821 
+dev ed f1:  0.6721311475409836  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.083533 -------
+--- Trigger Identification ---
+ P: 0.787026 R: 0.865410 F1: 0.824359
+--- Trigger Classification ---
+ P: 0.752754 R: 0.827725 F1: 0.788462
+---- seq loss : 0.073584 -----
+--- class loss : 0.011055 ----
+test an epoch: 4.72683572769165
+
+Epoch 84  test loss:  0.0835331212108334 
+test ed f1:  0.7884615384615384  test ae f1:  0
+Epoch 85
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.185812 -------
+--- Trigger Identification ---
+ P: 0.991900 R: 0.990605 F1: 0.991252
+--- Trigger Classification ---
+ P: 0.991638 R: 0.990344 F1: 0.990991
+---- seq loss : 0.000797 -----
+--- class loss : 0.012334 ----
+train an epoch: 350.21464133262634
+
+Epoch 85  training loss:  0.18581198125966633  training ed f1:  0.9909909909909911  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.103276 -------
+--- Trigger Identification ---
+ P: 0.696237 R: 0.723464 F1: 0.709589
+--- Trigger Classification ---
+ P: 0.653226 R: 0.678771 F1: 0.665753
+---- seq loss : 0.097296 -----
+--- class loss : 0.006644 ----
+
+Epoch 85  dev loss:  0.10327603830508171 
+dev ed f1:  0.6657534246575343  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.095621 -------
+--- Trigger Identification ---
+ P: 0.783208 R: 0.841184 F1: 0.811162
+--- Trigger Classification ---
+ P: 0.755639 R: 0.811575 F1: 0.782609
+---- seq loss : 0.085866 -----
+--- class loss : 0.010838 ----
+test an epoch: 5.228607177734375
+
+Epoch 85  test loss:  0.0956206905345122 
+test ed f1:  0.7826086956521738  test ae f1:  0
+Epoch 86
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.181265 -------
+--- Trigger Identification ---
+ P: 0.990876 R: 0.991910 F1: 0.991393
+--- Trigger Classification ---
+ P: 0.990094 R: 0.991127 F1: 0.990610
+---- seq loss : 0.000777 -----
+--- class loss : 0.012033 ----
+train an epoch: 351.11320900917053
+
+Epoch 86  training loss:  0.1812649854041521  training ed f1:  0.9906103286384976  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.115618 -------
+--- Trigger Identification ---
+ P: 0.715493 R: 0.709497 F1: 0.712482
+--- Trigger Classification ---
+ P: 0.661972 R: 0.656425 F1: 0.659187
+---- seq loss : 0.109772 -----
+--- class loss : 0.006495 ----
+
+Epoch 86  dev loss:  0.1156176036143174 
+dev ed f1:  0.6591865357643758  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.096308 -------
+--- Trigger Identification ---
+ P: 0.800776 R: 0.833109 F1: 0.816623
+--- Trigger Classification ---
+ P: 0.772316 R: 0.803499 F1: 0.787599
+---- seq loss : 0.086746 -----
+--- class loss : 0.010625 ----
+test an epoch: 4.753263473510742
+
+Epoch 86  test loss:  0.09630830350021521 
+test ed f1:  0.787598944591029  test ae f1:  0
+Epoch 87
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.177165 -------
+--- Trigger Identification ---
+ P: 0.989831 R: 0.990605 F1: 0.990218
+--- Trigger Classification ---
+ P: 0.988787 R: 0.989562 F1: 0.989174
+---- seq loss : 0.001037 -----
+--- class loss : 0.011742 ----
+train an epoch: 350.65413093566895
+
+Epoch 87  training loss:  0.17716518513525262  training ed f1:  0.9891743837224469  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.107200 -------
+--- Trigger Identification ---
+ P: 0.735294 R: 0.698324 F1: 0.716332
+--- Trigger Classification ---
+ P: 0.670588 R: 0.636872 F1: 0.653295
+---- seq loss : 0.101484 -----
+--- class loss : 0.006351 ----
+
+Epoch 87  dev loss:  0.10719967748781738 
+dev ed f1:  0.6532951289398281  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.092723 -------
+--- Trigger Identification ---
+ P: 0.797914 R: 0.823688 F1: 0.810596
+--- Trigger Classification ---
+ P: 0.770535 R: 0.795424 F1: 0.782781
+---- seq loss : 0.083347 -----
+--- class loss : 0.010417 ----
+test an epoch: 4.782994985580444
+
+Epoch 87  test loss:  0.09272251576185227 
+test ed f1:  0.7827814569536425  test ae f1:  0
+Epoch 88
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.172573 -------
+--- Trigger Identification ---
+ P: 0.993195 R: 0.990344 F1: 0.991768
+--- Trigger Classification ---
+ P: 0.992934 R: 0.990084 F1: 0.991507
+---- seq loss : 0.000768 -----
+--- class loss : 0.011454 ----
+train an epoch: 350.9782452583313
+
+Epoch 88  training loss:  0.17257327688796237  training ed f1:  0.9915065987194563  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.115355 -------
+--- Trigger Identification ---
+ P: 0.616071 R: 0.770950 F1: 0.684864
+--- Trigger Classification ---
+ P: 0.569196 R: 0.712291 F1: 0.632754
+---- seq loss : 0.109769 -----
+--- class loss : 0.006207 ----
+
+Epoch 88  dev loss:  0.11535515123978257 
+dev ed f1:  0.6327543424317619  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.125794 -------
+--- Trigger Identification ---
+ P: 0.701587 R: 0.892328 F1: 0.785545
+--- Trigger Classification ---
+ P: 0.675132 R: 0.858681 F1: 0.755924
+---- seq loss : 0.116600 -----
+--- class loss : 0.010215 ----
+test an epoch: 4.877845525741577
+
+Epoch 88  test loss:  0.12579365248481433 
+test ed f1:  0.7559241706161137  test ae f1:  0
+Epoch 89
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.168389 -------
+--- Trigger Identification ---
+ P: 0.990876 R: 0.991910 F1: 0.991393
+--- Trigger Classification ---
+ P: 0.990355 R: 0.991388 F1: 0.990871
+---- seq loss : 0.000810 -----
+--- class loss : 0.011172 ----
+train an epoch: 351.2906539440155
+
+Epoch 89  training loss:  0.1683893124547234  training ed f1:  0.9908711528429839  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.105580 -------
+--- Trigger Identification ---
+ P: 0.712707 R: 0.720670 F1: 0.716667
+--- Trigger Classification ---
+ P: 0.649171 R: 0.656425 F1: 0.652778
+---- seq loss : 0.100120 -----
+--- class loss : 0.006067 ----
+
+Epoch 89  dev loss:  0.10557992862483773 
+dev ed f1:  0.6527777777777778  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.090730 -------
+--- Trigger Identification ---
+ P: 0.779285 R: 0.850606 F1: 0.813385
+--- Trigger Classification ---
+ P: 0.747226 R: 0.815612 F1: 0.779923
+---- seq loss : 0.081714 -----
+--- class loss : 0.010018 ----
+test an epoch: 5.337834596633911
+
+Epoch 89  test loss:  0.09073009627560774 
+test ed f1:  0.7799227799227799  test ae f1:  0
+Epoch 90
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.164143 -------
+--- Trigger Identification ---
+ P: 0.993471 R: 0.992693 F1: 0.993082
+--- Trigger Classification ---
+ P: 0.992949 R: 0.992171 F1: 0.992560
+---- seq loss : 0.000696 -----
+--- class loss : 0.010896 ----
+train an epoch: 351.2456486225128
+
+Epoch 90  training loss:  0.16414277854470113  training ed f1:  0.9925597180524736  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.106759 -------
+--- Trigger Identification ---
+ P: 0.710383 R: 0.726257 F1: 0.718232
+--- Trigger Classification ---
+ P: 0.658470 R: 0.673184 F1: 0.665746
+---- seq loss : 0.101422 -----
+--- class loss : 0.005930 ----
+
+Epoch 90  dev loss:  0.10675933556362557 
+dev ed f1:  0.6657458563535911  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.098616 -------
+--- Trigger Identification ---
+ P: 0.779851 R: 0.843876 F1: 0.810601
+--- Trigger Classification ---
+ P: 0.751244 R: 0.812921 F1: 0.780866
+---- seq loss : 0.089773 -----
+--- class loss : 0.009826 ----
+test an epoch: 4.789605617523193
+
+Epoch 90  test loss:  0.0986158945908149 
+test ed f1:  0.7808661926308985  test ae f1:  0
+Epoch 91
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.160274 -------
+--- Trigger Identification ---
+ P: 0.993210 R: 0.992432 F1: 0.992821
+--- Trigger Classification ---
+ P: 0.992165 R: 0.991388 F1: 0.991777
+---- seq loss : 0.000865 -----
+--- class loss : 0.010627 ----
+train an epoch: 350.9383120536804
+
+Epoch 91  training loss:  0.1602738906516823  training ed f1:  0.9917765304790497  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.105232 -------
+--- Trigger Identification ---
+ P: 0.740061 R: 0.675978 F1: 0.706569
+--- Trigger Classification ---
+ P: 0.703364 R: 0.642458 F1: 0.671533
+---- seq loss : 0.100014 -----
+--- class loss : 0.005797 ----
+
+Epoch 91  dev loss:  0.10523191648490655 
+dev ed f1:  0.6715328467153284  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.092242 -------
+--- Trigger Identification ---
+ P: 0.831006 R: 0.800808 F1: 0.815627
+--- Trigger Classification ---
+ P: 0.807263 R: 0.777927 F1: 0.792324
+---- seq loss : 0.083565 -----
+--- class loss : 0.009640 ----
+test an epoch: 5.065778493881226
+
+Epoch 91  test loss:  0.09224150727192561 
+test ed f1:  0.792323509252913  test ae f1:  0
+Epoch 92
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.156232 -------
+--- Trigger Identification ---
+ P: 0.992430 R: 0.992171 F1: 0.992301
+--- Trigger Classification ---
+ P: 0.990603 R: 0.990344 F1: 0.990474
+---- seq loss : 0.000771 -----
+--- class loss : 0.010364 ----
+train an epoch: 351.5996468067169
+
+Epoch 92  training loss:  0.15623154575452333  training ed f1:  0.9904737048153465  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.107550 -------
+--- Trigger Identification ---
+ P: 0.663239 R: 0.720670 F1: 0.690763
+--- Trigger Classification ---
+ P: 0.611825 R: 0.664804 F1: 0.637216
+---- seq loss : 0.102449 -----
+--- class loss : 0.005668 ----
+
+Epoch 92  dev loss:  0.1075497048530871 
+dev ed f1:  0.6372155287817939  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.100525 -------
+--- Trigger Identification ---
+ P: 0.735698 R: 0.865410 F1: 0.795300
+--- Trigger Classification ---
+ P: 0.707094 R: 0.831763 F1: 0.764378
+---- seq loss : 0.092012 -----
+--- class loss : 0.009460 ----
+test an epoch: 4.812865734100342
+
+Epoch 92  test loss:  0.10052547231316566 
+test ed f1:  0.7643784786641928  test ae f1:  0
+Epoch 93
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.152658 -------
+--- Trigger Identification ---
+ P: 0.990347 R: 0.990605 F1: 0.990476
+--- Trigger Classification ---
+ P: 0.988782 R: 0.989040 F1: 0.988911
+---- seq loss : 0.001058 -----
+--- class loss : 0.010107 ----
+train an epoch: 350.8584258556366
+
+Epoch 93  training loss:  0.15265849986392183  training ed f1:  0.9889106327462491  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.103560 -------
+--- Trigger Identification ---
+ P: 0.751534 R: 0.684358 F1: 0.716374
+--- Trigger Classification ---
+ P: 0.693252 R: 0.631285 F1: 0.660819
+---- seq loss : 0.098572 -----
+--- class loss : 0.005542 ----
+
+Epoch 93  dev loss:  0.10356016821550348 
+dev ed f1:  0.6608187134502924  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.096376 -------
+--- Trigger Identification ---
+ P: 0.796026 R: 0.808883 F1: 0.802403
+--- Trigger Classification ---
+ P: 0.774834 R: 0.787349 F1: 0.781041
+---- seq loss : 0.088019 -----
+--- class loss : 0.009285 ----
+test an epoch: 4.784018516540527
+
+Epoch 93  test loss:  0.09637553390736381 
+test ed f1:  0.7810413885180241  test ae f1:  0
+Epoch 94
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.148736 -------
+--- Trigger Identification ---
+ P: 0.990091 R: 0.990866 F1: 0.990479
+--- Trigger Classification ---
+ P: 0.989570 R: 0.990344 F1: 0.989957
+---- seq loss : 0.000909 -----
+--- class loss : 0.009855 ----
+train an epoch: 351.2808141708374
+
+Epoch 94  training loss:  0.14873574369496545  training ed f1:  0.9899569583931133  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.108099 -------
+--- Trigger Identification ---
+ P: 0.636364 R: 0.743017 F1: 0.685567
+--- Trigger Classification ---
+ P: 0.590909 R: 0.689944 F1: 0.636598
+---- seq loss : 0.103221 -----
+--- class loss : 0.005420 ----
+
+Epoch 94  dev loss:  0.1080991671501229 
+dev ed f1:  0.6365979381443299  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.097636 -------
+--- Trigger Identification ---
+ P: 0.740275 R: 0.870794 F1: 0.800247
+--- Trigger Classification ---
+ P: 0.720824 R: 0.847914 F1: 0.779221
+---- seq loss : 0.089433 -----
+--- class loss : 0.009115 ----
+test an epoch: 4.734053611755371
+
+Epoch 94  test loss:  0.09763636067509651 
+test ed f1:  0.7792207792207793  test ae f1:  0
+Epoch 95
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.145117 -------
+--- Trigger Identification ---
+ P: 0.990874 R: 0.991649 F1: 0.991261
+--- Trigger Classification ---
+ P: 0.990352 R: 0.991127 F1: 0.990740
+---- seq loss : 0.000973 -----
+--- class loss : 0.009610 ----
+train an epoch: 349.83557963371277
+
+Epoch 95  training loss:  0.1451165768139015  training ed f1:  0.9907395330637797  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.097928 -------
+--- Trigger Identification ---
+ P: 0.698667 R: 0.731844 F1: 0.714870
+--- Trigger Classification ---
+ P: 0.645333 R: 0.675978 F1: 0.660300
+---- seq loss : 0.093156 -----
+--- class loss : 0.005302 ----
+
+Epoch 95  dev loss:  0.09792826707080866 
+dev ed f1:  0.660300136425648  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.090689 -------
+--- Trigger Identification ---
+ P: 0.765197 R: 0.864065 F1: 0.811631
+--- Trigger Classification ---
+ P: 0.742551 R: 0.838493 F1: 0.787611
+---- seq loss : 0.082634 -----
+--- class loss : 0.008950 ----
+test an epoch: 4.779797315597534
+
+Epoch 95  test loss:  0.09068922102451324 
+test ed f1:  0.7876106194690266  test ae f1:  0
+Epoch 96
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.141278 -------
+--- Trigger Identification ---
+ P: 0.993737 R: 0.993737 F1: 0.993737
+--- Trigger Classification ---
+ P: 0.993215 R: 0.993215 F1: 0.993215
+---- seq loss : 0.000737 -----
+--- class loss : 0.009369 ----
+train an epoch: 350.19594502449036
+
+Epoch 96  training loss:  0.14127766199884875  training ed f1:  0.9932150313152401  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.097525 -------
+--- Trigger Identification ---
+ P: 0.717877 R: 0.717877 F1: 0.717877
+--- Trigger Classification ---
+ P: 0.664804 R: 0.664804 F1: 0.664804
+---- seq loss : 0.092859 -----
+--- class loss : 0.005186 ----
+
+Epoch 96  dev loss:  0.09752549255678716 
+dev ed f1:  0.664804469273743  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.082886 -------
+--- Trigger Identification ---
+ P: 0.795256 R: 0.857335 F1: 0.825130
+--- Trigger Classification ---
+ P: 0.771536 R: 0.831763 F1: 0.800518
+---- seq loss : 0.074977 -----
+--- class loss : 0.008788 ----
+test an epoch: 4.762187480926514
+
+Epoch 96  test loss:  0.0828862058930099 
+test ed f1:  0.8005181347150259  test ae f1:  0
+Epoch 97
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.137790 -------
+--- Trigger Identification ---
+ P: 0.991391 R: 0.991649 F1: 0.991520
+--- Trigger Classification ---
+ P: 0.990608 R: 0.990866 F1: 0.990737
+---- seq loss : 0.000763 -----
+--- class loss : 0.009135 ----
+train an epoch: 349.9501657485962
+
+Epoch 97  training loss:  0.13778965140895397  training ed f1:  0.990737116764514  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.106976 -------
+--- Trigger Identification ---
+ P: 0.700000 R: 0.723464 F1: 0.711538
+--- Trigger Classification ---
+ P: 0.643243 R: 0.664804 F1: 0.653846
+---- seq loss : 0.102409 -----
+--- class loss : 0.005074 ----
+
+Epoch 97  dev loss:  0.1069763567021045 
+dev ed f1:  0.6538461538461539  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.092367 -------
+--- Trigger Identification ---
+ P: 0.771257 R: 0.866756 F1: 0.816223
+--- Trigger Classification ---
+ P: 0.747305 R: 0.839838 F1: 0.790875
+---- seq loss : 0.084597 -----
+--- class loss : 0.008633 ----
+test an epoch: 4.777188777923584
+
+Epoch 97  test loss:  0.09236672533055147 
+test ed f1:  0.7908745247148288  test ae f1:  0
+Epoch 98
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.134347 -------
+--- Trigger Identification ---
+ P: 0.993457 R: 0.990605 F1: 0.992029
+--- Trigger Classification ---
+ P: 0.992934 R: 0.990084 F1: 0.991507
+---- seq loss : 0.000760 -----
+--- class loss : 0.008906 ----
+train an epoch: 349.7364785671234
+
+Epoch 98  training loss:  0.1343466605809692  training ed f1:  0.9915065987194563  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.109890 -------
+--- Trigger Identification ---
+ P: 0.669173 R: 0.745810 F1: 0.705416
+--- Trigger Classification ---
+ P: 0.609023 R: 0.678771 F1: 0.642008
+---- seq loss : 0.105421 -----
+--- class loss : 0.004966 ----
+
+Epoch 98  dev loss:  0.10989031166536734 
+dev ed f1:  0.6420079260237781  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.099552 -------
+--- Trigger Identification ---
+ P: 0.751724 R: 0.880215 F1: 0.810911
+--- Trigger Classification ---
+ P: 0.726437 R: 0.850606 F1: 0.783633
+---- seq loss : 0.091917 -----
+--- class loss : 0.008483 ----
+test an epoch: 4.668781995773315
+
+Epoch 98  test loss:  0.09955185459305843 
+test ed f1:  0.7836329820210788  test ae f1:  0
+Epoch 99
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.130987 -------
+--- Trigger Identification ---
+ P: 0.993992 R: 0.992954 F1: 0.993473
+--- Trigger Classification ---
+ P: 0.993469 R: 0.992432 F1: 0.992950
+---- seq loss : 0.000763 -----
+--- class loss : 0.008682 ----
+train an epoch: 350.21398758888245
+
+Epoch 99  training loss:  0.13098729198652567  training ed f1:  0.9929503916449085  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.113468 -------
+--- Trigger Identification ---
+ P: 0.673522 R: 0.731844 F1: 0.701473
+--- Trigger Classification ---
+ P: 0.627249 R: 0.681564 F1: 0.653280
+---- seq loss : 0.109093 -----
+--- class loss : 0.004862 ----
+
+Epoch 99  dev loss:  0.11346826833995202 
+dev ed f1:  0.6532797858099063  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.097054 -------
+--- Trigger Identification ---
+ P: 0.743503 R: 0.885599 F1: 0.808354
+--- Trigger Classification ---
+ P: 0.718644 R: 0.855989 F1: 0.781327
+---- seq loss : 0.089551 -----
+--- class loss : 0.008337 ----
+test an epoch: 4.715578079223633
+
+Epoch 99  test loss:  0.09705445390815536 
+test ed f1:  0.7813267813267813  test ae f1:  0
+Epoch 100
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.127781 -------
+--- Trigger Identification ---
+ P: 0.991120 R: 0.990344 F1: 0.990732
+--- Trigger Classification ---
+ P: 0.989815 R: 0.989040 F1: 0.989427
+---- seq loss : 0.000844 -----
+--- class loss : 0.008463 ----
+train an epoch: 349.9605543613434
+
+Epoch 100  training loss:  0.12778133964993546  training ed f1:  0.9894269677587783  training ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.109830 -------
+--- Trigger Identification ---
+ P: 0.735294 R: 0.698324 F1: 0.716332
+--- Trigger Classification ---
+ P: 0.688235 R: 0.653631 F1: 0.670487
+---- seq loss : 0.105546 -----
+--- class loss : 0.004760 ----
+
+Epoch 100  dev loss:  0.10982980981666166 
+dev ed f1:  0.6704871060171921  dev ae f1:  0
+Seq train
+Epoch finish
+------------------------------
+------ loss : 0.091086 -------
+--- Trigger Identification ---
+ P: 0.811749 R: 0.818304 F1: 0.815013
+--- Trigger Classification ---
+ P: 0.795728 R: 0.802153 F1: 0.798928
+---- seq loss : 0.083711 -----
+--- class loss : 0.008195 ----
+test an epoch: 4.896597146987915
+
+Epoch 100  test loss:  0.0910857046643893 
+test ed f1:  0.7989276139410189  test ae f1:  0
+Training Done!
+Best score: 0.8052287581699347 at epoch 63
+Done!
